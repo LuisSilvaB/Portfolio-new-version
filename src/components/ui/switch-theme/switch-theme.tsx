@@ -28,7 +28,7 @@ const SwitchTheme = () => {
   return (
     <div className="flex items-center gap-2">
       <Switch onCheckedChange={toggleTheme} checked={isDark} />
-      <span>{isDark ? <CiCloudMoon /> : <CiBrightnessUp />}</span>
+      <span>{isDark ? <CiCloudMoon className="text-white" /> : <CiBrightnessUp />}</span>
     </div>
 
   );

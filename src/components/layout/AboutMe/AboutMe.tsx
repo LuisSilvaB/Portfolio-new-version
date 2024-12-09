@@ -1,20 +1,37 @@
 
 import { Button } from '@/components/ui/button';
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import type { Lang } from '@/types/lang.type';
+import dictionary from '@/assets/dictionary.json';
 
-const MeInformation = () => {
-  
+type AboutMeProps = {
+  lang: Lang;
+}
+
+const MeInformation = ({ lang }: AboutMeProps) => {
+  const dictionaryData = dictionary.aboutMe;
   return (
-    <section  className="relative transition-all ease-in-out text-gray-800  w-full max-w-7xl h-full min-h-[500px] lg:min-h-[700px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="relative transition-all ease-in-out text-gray-800  w-full max-w-7xl h-full min-h-[500px] lg:min-h-[600px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 "
+    >
       <h1 className="text-2xl dark:text-white lg:text-5xl font-extrabold tracking-tight leading-tight">
-        Hi! I'm <span className="text-blue-500 dark:text-yellow-500">Luis Silva Balladares</span>
+        {dictionaryData.title[lang]}{" "}
+        <span className="text-blue-500 dark:text-yellow-500">
+          Luis Silva Balladares
+        </span>
       </h1>
       <TypeAnimation
         className="text-lg dark:text-white lg:text-2xl font-medium"
         sequence={[
-          "I'm a Web Developer 🚀",
+          dictionaryData.descriptionTyping1[lang],
           1500,
-          "I'm a Bachelor of Science in Computer Science 🎓",
+          dictionaryData.descriptionTyping2[lang],
           1500,
         ]}
         wrapper="span"
@@ -23,17 +40,21 @@ const MeInformation = () => {
         repeat={Infinity}
       />
       <p className="text-sm dark:text-white mt-4 leading-relaxed max-w-2xl">
-        With a passion for creating intuitive and scalable web applications, I
-        specialize in crafting solutions that make an impact. Let's build
-        something amazing together!
+        {dictionaryData.description[lang]}
       </p>
       <section className="flex flex-row gap-2">
-        <Button>Linkedin</Button>
-        <Button>Github</Button>
+        <Button className='group flex flex-row gap-2'>
+          <FaLinkedin className="transition-all ease-in-out text-white dark:text-blue-500" /> 
+          <span>Linkedin</span>
+        </Button>
+        <Button>
+          <FaGithub className="transition-all ease-in-out text-white dark:text-black" />
+          <span>Github</span>
+        </Button>
         <Button>Cv</Button>
       </section>
-    </section>
+    </motion.div>
   );
-}
+};
 
 export default MeInformation

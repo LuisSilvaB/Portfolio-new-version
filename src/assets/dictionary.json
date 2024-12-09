@@ -1,0 +1,122 @@
+{
+  "navbar": {
+    "aboutMe":{
+      "en":"About Me",
+      "es":"Sobre mi"
+    },
+    "workExperience": {
+      "en": "Work Experience",
+      "es": "Experiencia laboral"
+    },
+    "projects": {
+      "en": "Projects",
+      "es": "Proyectos"
+    },
+    "education": {
+      "en": "Education",
+      "es": "Educación"
+    },
+    "getInTouch": {
+      "en": "Get in touch",
+      "es": "Contáctame"
+    }
+  },
+  "aboutMe": {
+    "title": {
+      "en": "Hi, I'm",
+      "es": "Hola, soy"
+    },
+    "descriptionTyping1": {
+      "en": "I'm a Web Developer 🚀",
+      "es": "Soy Desarrollador Web  🚀"
+    },
+    "descriptionTyping2": {
+      "en": "I'm a Bachelor in Computer and Systems Engineering 🎓",
+      "es": "Bachiller en Ingeniería de Sistemas y Computación 🎓"
+    },
+    "description":{
+      "en": "I am a web developer with 1 year of experience in projects covering both frontend and backend development. I have been involved in creating and managing user interfaces, as well as developing and maintaining server-side services and microservices, using frameworks that ensure well-structured and scalable code.",
+      "es": "Soy un desarrollador web con 1 año de experiencia en proyectos que abarcan tanto el desarrollo frontend como backend. He participado en la creación y administración de interfaces de usuario y en el desarrollo y mantenimiento de servicios y microservicios en el servidor, utilizando frameworks que garantizan un código bien estructurado y escalable."
+    }
+  },
+  "workExperience":{
+    "title":{
+      "en": "Work Experience",
+      "es": "Experiencia laboral"
+    },
+    "experiences":[
+      {
+        "title": {
+          "en": "Full Stack Developer - Freelance",
+          "es": "Desarrollador Full Stack - Freelance"
+        },
+        "date": {
+          "en": "04/2024 - present",
+          "es": "04/2024 - actualidad"
+        },
+        "description": {
+          "en": "I designed and implemented user interfaces based on user requirements and guidelines, ensuring a high-quality visual and functional experience. I created and maintained backend services and microservices to support key functionalities, including a scraping service that keeps the information in the main application up to date.",
+          "es": "Diseñé y implementé interfaces de usuario basadas en requisitos y directrices de usuario, garantizando una experiencia visual y funcional de alta calidad. Creé y mantení servicios de backend y microservicios para apoyar funcionalidades clave, incluyendo un servicio de scraping que mantiene la información en la aplicación principal actualizada."
+        },
+        "techStack": {
+          "title":{
+            "en": "Tech Stack",
+            "es": "Tecnologías utilizadas"
+          },
+          "description": {
+            "en": "React, Styled-components, React Router DOM, React Query, React Hook Form, Yup, Joi, Node.js, Express, MySQL, Sequelize, Puppeteer, AWS (EC2, S3, WorkMail, Lightsail), Git, and automation and scraping tools.",
+            "es": "React, Styled-components, React Router DOM, React Query, React Hook Form, Yup, Joi, Node.js, Express, MySQL, Sequelize, Puppeteer, AWS (EC2, S3, WorkMail, Lightsail), Git, y herramientas de automatización y scraping."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "Front End developer trainee - Softaki",
+          "es": "Front End developer trainee - Softaki"
+        },
+        "date": {
+          "en": "01/2024 - 04/2024",
+          "es": "01/2024 - 04/2024"
+        },
+        "description":{
+          "en": "I developed user interfaces based on Figma designs, ensuring proper functionality and optimization for a smooth and efficient user experience.", 
+          "es": "Desarrollé interfaces de usuario basadas en diseños de Figma, asegurando el correcto funcionamiento y la optimización para una experiencia de usuario fluida y eficiente."
+        },
+        "techStack": {
+          "title":{
+            "en": "Tech Stack",
+            "es": "Tecnologías utilizadas"
+          },
+          "description": {
+            "en": "React, Next.js, tailwind, React Query, React-flow.",
+            "es": "React, Next.js, tailwind, React Query, React-flow."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "Systems Engineering Intern - CEGEP",
+          "es": "Practicante en Ingeniería de Sistemas - CEGEP"
+        },
+        "date": {
+          "en": "06/2023- 11/2023",
+          "es": "06/2023- 11/2023"
+        },
+        "description":{
+          "en": "I performed maintenance and process improvement on the website, applying solutions.", 
+          "es": "Realicé mantenimiento y mejora de procesos en la página web, aplicando soluciones."
+        },
+        "techStack": {
+          "title":{
+            "en": "Tech Stack",
+            "es": "Tecnologías utilizadas"
+          },
+          "description": {
+            "en": "WordPress, Html, Css.",
+            "es": "WordPress, Html, Css."
+          }
+        }
+      }
+    ]
+  }
+}

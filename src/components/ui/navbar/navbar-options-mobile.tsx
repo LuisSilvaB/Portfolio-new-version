@@ -5,29 +5,41 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from "../button";
+import dictionary from "@/assets/dictionary.json";
+import type { Lang } from "@/types/lang.type";
 
-const NavbarMobileOptions = () => {
+type NavbarMobileOptionsProps = {
+  lang: Lang;
+}
+
+const NavbarMobileOptions = ( {lang} : NavbarMobileOptionsProps) => {
+  const dictionaryData = dictionary.navbar;
   return (
     <Sheet>
-      <SheetTrigger className="flex items-center justify-center lg:hidden">
-        <VscListSelection />
+      <SheetTrigger className="flex items-center justify-center dark:text-white lg:hidden">
+        <VscListSelection className="dark:text-white" />
       </SheetTrigger>
-      <SheetContent side={"left"} className="flex flex-col justify-start items-start">
+      <SheetContent
+        side={"left"}
+        className="flex flex-col dark:text-white justify-start items-start"
+      >
         <ul className="flex w-full items-start flex-col mt-10">
           <li>
-            <Button variant="link">About me</Button>
+            <Button variant="link">{dictionaryData.aboutMe[lang]}</Button>
           </li>
           <li>
-            <Button variant="link">Work experience</Button>
+            <Button variant="link">
+              {dictionaryData.workExperience[lang]}
+            </Button>
           </li>
           <li>
-            <Button variant="link">Projects</Button>
+            <Button variant="link">{dictionaryData.projects[lang]}</Button>
           </li>
           <li>
-            <Button variant="link">Education</Button>
+            <Button variant="link">{dictionaryData.education[lang]}</Button>
           </li>
           <li>
-            <Button variant="link">Get in touch</Button>
+            <Button variant="link">{dictionaryData.getInTouch[lang]}</Button>
           </li>
         </ul>
       </SheetContent>
