@@ -38,6 +38,7 @@ const MeInformation = ({ lang }: AboutMeProps) => {
         speed={60}
         deletionSpeed={20}
         repeat={Infinity}
+        omitDeletionAnimation
       />
       <p className="text-sm dark:text-white mt-4 leading-relaxed max-w-2xl">
         {dictionaryData.description[lang]}

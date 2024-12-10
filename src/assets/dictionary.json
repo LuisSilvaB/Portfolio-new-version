@@ -39,6 +39,87 @@
       "es": "Soy un desarrollador web con 1 año de experiencia en proyectos que abarcan tanto el desarrollo frontend como backend. He participado en la creación y administración de interfaces de usuario y en el desarrollo y mantenimiento de servicios y microservicios en el servidor, utilizando frameworks que garantizan un código bien estructurado y escalable."
     }
   },
+  "Projects": {
+    "title": {
+      "en": "Projects",
+      "es": "Proyectos"
+    },
+    "secondaryTitle": {
+      "en": "My Projects Collection",
+      "es": "My Colección de Proyectos"
+    },
+    "secondaryDescription": {
+      "en":"Here you can find some of my last personal projects",
+      "es":"Aquí puedes ver algunos de mis últimos proyectos personales realizados"
+    },
+    "projects": [
+      {
+        "title":{
+          "en":"Cake Harmony",
+          "es":"Cake Harmony"
+        },
+        "description":{
+          "en":"A store management system that allows users to manage their inventory, orders, and payments.",
+          "es":"Un sistema de gestión de tienda que permite a los usuarios gestionar su inventario, pedidos y pagos."
+        },
+        "technologies": [
+          "nextjs",
+          "tailwind",
+          "supabase",
+          "react",
+          "oauth",
+          "chadcn",
+          "redux",
+          "reactForm"
+        ],
+        "url": "https://cake-harmony-luissilvabs-projects.vercel.app/",
+        "git_url": null,
+        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/cake-harmony.webp?t=2024-12-10T00%3A31%3A16.419Z"
+      },
+      {
+        "title":{
+          "en":"Voice quiz app",
+          "es":"Voice quiz app"
+        },
+        "description":{
+          "en":"This is a project that allows teachers to use artificial intelligence to create questions and quizzes.",
+          "es":"Este es un proyecto que permite a los profesores usar la inteligencia artificial para crear preguntas y cuestionarios."
+        },
+        "technologies": [
+          "vite",
+          "tailwind",
+          "supabase",
+          "react",
+          "python",
+          "oauth",
+          "redux",
+          "python",
+          "flask"
+        ],
+        "url": "https://voice-quiz-app.vercel.app/",
+        "git_url": "https://github.com/LuisSilvaB/voice-quiz-app",
+        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/voice-quiz.webp?t=2024-12-10T00%3A25%3A15.234Z"
+      },
+      {
+        "title":{
+          "en":"Rextie Clone app",
+          "es":"Rextie Clone app"
+        },
+        "description":{
+          "en":"This is a ui representation of the Rexie app.",
+          "es":"Esta es una representación ui de la aplicación Rexie."
+        },
+        "technologies": [
+          "nextjs",
+          "tailwind",
+          "react"
+        ],
+        "url": "https://rextie-clone-app.vercel.app/",
+        "git_url": "https://github.com/LuisSilvaB/rextie-clone-app",
+        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/rextie-clone.webp?t=2024-12-10T00%3A15%3A43.425Z"
+      }
+    ]
+  },
   "workExperience":{
     "title":{
       "en": "Work Experience",

@@ -1,11 +1,12 @@
 ---
 import "@/styles/globals.css";
+import { type Lang } from "@/types/lang.type";
 import Navbar from "@/components/ui/navbar/navbar";
 import Layout from "../../layouts/Layout.astro";
-import AboutMe from "@/components/layout/AboutMe/AboutMe";
-import WorkExperience from "@/components/layout/WorkExperience";
-import Technologies from "@/components/layout/Technologies/Technologies";
-import { type Lang } from "@/types/lang.type";
+import AboutMe from "@/components/sections/AboutMe/AboutMe";
+import WorkExperience from "@/components/sections/WorkExperience";
+import Technologies from "@/components/sections/Technologies/Technologies";
+import Projects from "@/components/sections/Projects/Projects";
 
 export function getStaticPaths() {
   return [
@@ -26,6 +27,9 @@ const { lang } = Astro.params;
     </section>
     <section class="w-full flex justify-center items-start bg-white h-auto z-10 dark:bg-[#121b26]">
       <WorkExperience lang = {lang as Lang} client:load/>
+    </section>
+    <section class="w-full flex justify-center items-start bg-[#F5F5F5] h-fit dark:bg-[#060c14] z-10">
+      <Projects lang = {lang as Lang} client:load/>
     </section>
   </main>
 </Layout>
