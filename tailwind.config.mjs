@@ -5,6 +5,12 @@ export default {
   darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    backgroundImage:{
+      "sandbag": "url('/public/img/grey_sandbag.png')",
+      "black_sandbag": "url('/public/img/black_sandbag.jpg')",
+      "black_sand": "url('/public/img/black_sand.jpg')",
+      "sakura": "url('/public/img/sakura_2.jpg')",
+    }, 
     fontFamily: {
 			sans: ['Inter', ...defaultTheme.fontFamily.sans],
 			mono: ['Inter', ...defaultTheme.fontFamily.mono],
@@ -12,7 +18,8 @@ export default {
       inter: ['Inter', 'sans-serif'],
       monoton: ['Monoton', 'sans-serif'],
       plaster: ['Plaster', 'sans-serif'],
-		},
+      satoshi: ['Satoshi', 'sans-serif'],
+    },
     extend: {
       borderRadius: {
         lg: "var(--radius)",

@@ -11,19 +11,19 @@ const NavbarDesktopOptions = ({ lang }: NavbarDesktopOptionsProps) => {
   return (
     <ul className="hidden lg:flex items-center">
       <li>
-        <Button variant="link">{dictionaryData.aboutMe[lang]}</Button>
+        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.aboutMe[lang]}</Button>
       </li>
       <li>
-        <Button variant="link">{dictionaryData.workExperience[lang]}</Button>
+        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.workExperience[lang]}</Button>
       </li>
       <li>
-        <Button variant="link">{dictionaryData.projects[lang]}</Button>
+        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.projects[lang]}</Button>
       </li>
       <li>
-        <Button variant="link">{dictionaryData.education[lang]}</Button>
+        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.education[lang]}</Button>
       </li>
       <li>
-        <Button variant="link">{dictionaryData.getInTouch[lang]}</Button>
+        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.getInTouch[lang]}</Button>
       </li>
     </ul>
   );

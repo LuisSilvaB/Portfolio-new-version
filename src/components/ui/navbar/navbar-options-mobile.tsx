@@ -23,7 +23,7 @@ const NavbarMobileOptions = ( {lang} : NavbarMobileOptionsProps) => {
         side={"left"}
         className="flex flex-col dark:text-white justify-start items-start"
       >
-        <ul className="flex w-full items-start flex-col mt-10">
+        <ul className="flex w-full uppercase items-start flex-col mt-10">
           <li>
             <Button variant="link">{dictionaryData.aboutMe[lang]}</Button>
           </li>

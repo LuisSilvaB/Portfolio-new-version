@@ -12,6 +12,8 @@ import { SiStyledcomponents } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiAmazons3 } from "react-icons/si";
 import { FaAws, FaReact } from "react-icons/fa";
+import TechnologiesCard from "./components/technologiesCard";
+import { motion } from "framer-motion";
 
 const Technologies = () => {
   const [emblaRef] = useEmblaCarousel(
@@ -85,22 +87,33 @@ const Technologies = () => {
   ];
 
   return (
-    <div className=" text-gray-500 text-2xl lg:text-5xl mb-10 lg:mb-32 w-full max-w-7xl gap-10 flex flex-col">
-      <Carousel opts={{
-        loop: true,
-        active: true,
-        startIndex: 1
-      }} ref={emblaRef} plugins={[plugin.current]} className="w-full">
+    <motion.div className=" text-gray-500 text-2xl lg:text-5xl mb-10 lg:mb-32 w-full max-w-7xl gap-10 flex flex-col">
+      <div className="hidden lg:flex w-full flex-wrap gap-10 justify-start items-center">
+        {FrontTechnologies.map((tech, index) => <TechnologiesCard key={index} id={index + 1} icon={tech.icon} name={tech.name} />)}
+      </div>
+      <Carousel
+        opts={{
+          loop: true,
+          active: true,
+          startIndex: 1,
+        }}
+        ref={emblaRef}
+        plugins={[plugin.current]}
+        className="w-full flex lg:hidden"
+      >
         <CarouselContent className="px-10">
           {FrontTechnologies.map((tech, index) => (
-            <CarouselItem key={index} className={`w-full md:basis-1/2 lg:basis-[35%] gap-4 py-3 flex items-center`}> 
+            <CarouselItem
+              key={index}
+              className={`w-full text-2xl md:basis-1/2 lg:basis-[15%] gap-4 py-3 flex items-center`}
+            >
               {tech.icon}
-              <p>{tech.name}</p>
+              <p className="font-semibold">{tech.name}</p>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
-    </div>
+    </motion.div>
   );
 };
 

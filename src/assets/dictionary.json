@@ -117,6 +117,42 @@
         "url": "https://rextie-clone-app.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/rextie-clone-app",
         "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/rextie-clone.webp?t=2024-12-10T00%3A15%3A43.425Z"
+      }, 
+      {
+        "title":{
+          "en":"KDS Challenge",
+          "es":"KDS Challenge"
+        },
+        "description":{
+          "en":"Order management application, built with Vite, that allows you to record order status efficiently.",
+          "es":"Aplicación de gestión de pedidos, construida con Vite, que permite registrar el estado de pedido de manera eficiente."
+        },
+        "technologies": [
+          "vite",
+          "tailwind",
+          "react"
+        ],
+        "url": "https://challenge-fronted-kds.vercel.app/",
+        "git_url": "https://github.com/LuisSilvaB/challenge-fronted-kds",
+        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/KDS-Challenge_compresed.webp?t=2024-12-11T01%3A54%3A16.211Z"
+      },
+      {
+        "title":{
+          "en":"Task Challenge",
+          "es":"Task Challenge"
+        },
+        "description":{
+          "en":"This task management application, built with Vite, register, delete, edit, and change the status of your tasks",
+          "es":"Esta aplicación de gestión de tareas, construida con Vite, permite registrar, eliminar, editar y cambiar el estado de sus tareas "
+        },
+        "technologies": [
+          "vite",
+          "tailwind",
+          "react"
+        ],
+        "url": "https://react-task-challenge.vercel.app/",
+        "git_url": "https://github.com/LuisSilvaB/react-task-challenge",
+        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/RavnTaskChallenge.webp?t=2024-12-11T02%3A16%3A06.209Z"
       }
     ]
   },

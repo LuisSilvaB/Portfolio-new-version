@@ -4,7 +4,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
 import type { Lang } from '@/types/lang.type';
 import dictionary from '@/assets/dictionary.json';
 
@@ -18,7 +17,7 @@ const MeInformation = ({ lang }: AboutMeProps) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="relative transition-all ease-in-out text-gray-800  w-full max-w-7xl h-full min-h-[500px] lg:min-h-[600px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 "
+      className="relative transition-all ease-in-out text-gray-800  w-full max-w-7xl h-full min-h-[500px] lg:min-h-[550px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 "
     >
       <h1 className="text-2xl dark:text-white lg:text-5xl font-extrabold tracking-tight leading-tight">
         {dictionaryData.title[lang]}{" "}
@@ -27,7 +26,7 @@ const MeInformation = ({ lang }: AboutMeProps) => {
         </span>
       </h1>
       <TypeAnimation
-        className="text-lg dark:text-white lg:text-2xl font-medium"
+        className="text-lg dark:text-white lg:text-2xl font-semibold tracking-tight leading-tight"
         sequence={[
           dictionaryData.descriptionTyping1[lang],
           1500,
