@@ -87,7 +87,7 @@ const Technologies = () => {
   ];
 
   return (
-    <motion.div className=" text-gray-500 text-2xl lg:text-5xl mb-10 lg:mb-32 w-full max-w-7xl gap-10 flex flex-col">
+    <motion.div className=" text-gray-500 text-2xl lg:text-5xl mb-10 lg:mb-32 w-full max-w-6xl gap-10 flex flex-col">
       <div className="hidden lg:flex w-full flex-wrap gap-10 justify-start items-center">
         {FrontTechnologies.map((tech, index) => <TechnologiesCard key={index} id={index + 1} icon={tech.icon} name={tech.name} />)}
       </div>

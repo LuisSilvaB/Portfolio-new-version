@@ -36,9 +36,6 @@ const SelectLang = ({ lang }: SelectLangProps) => {
     window.location.href = `/${value}`;
   };
 
-  console.log(selectedLang);
-  console.log(lang);
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSelectedLang(lang);

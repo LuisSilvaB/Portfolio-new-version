@@ -21,14 +21,14 @@ const { lang } = Astro.params;
 <Layout title="Luis Silva Portfolio">
   <Navbar lang={lang as Lang} client:load/>
   <main class="w-full h-auto flex flex-col justify-start items-start">
-    <section class="w-full bg-sandbag flex justify-center flex-col items-center bg-[#F5F5F5] h-fit dark:bg-[#060c14] dark:bg-[url('')]">
+    <section class="w-full  flex justify-center flex-col items-center bg-[#F5F5F5] h-fit dark:bg-[#060c14] dark:bg-[url('')]">
       <AboutMe lang = {lang as Lang} client:load/>
       <Technologies client:load/>
     </section>
-    <section class="w-full bg-sandbag flex justify-center items-start bg-white h-auto z-10 dark:bg-[#121b26] dark:bg-[url('')]">
+    <section class="w-full  flex justify-center items-start bg-white h-auto z-10 dark:bg-[#121b26] dark:bg-[url('')]">
       <WorkExperience lang = {lang as Lang} client:load/>
     </section>
-    <section class="w-full flex justify-center items-start bg-[#F5F5F5] h-fit dark:bg-[#060c14] z-10">
+    <section class="w-full h-auto flex justify-center items-center bg-[#F5F5F5] dark:bg-[#060c14] z-10">
       <Projects lang = {lang as Lang} client:load/>
     </section>
   </main>

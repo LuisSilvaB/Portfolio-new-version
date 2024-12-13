@@ -17,7 +17,7 @@ const MeInformation = ({ lang }: AboutMeProps) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="relative transition-all ease-in-out text-gray-800  w-full max-w-7xl h-full min-h-[500px] lg:min-h-[550px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 "
+      className="relative transition-all ease-in-out text-gray-800 w-full max-w-6xl h-full min-h-[500px] lg:min-h-[550px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 "
     >
       <h1 className="text-2xl dark:text-white lg:text-5xl font-extrabold tracking-tight leading-tight">
         {dictionaryData.title[lang]}{" "}
