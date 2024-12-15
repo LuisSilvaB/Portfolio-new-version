@@ -59,5 +59,8 @@ export type TechnologiesType =
   | "python"
   | "flask"
   | "ecs"
-  | "reactForm";
+  | "reactForm"
+  | "css"
+  | "html"
+  | "javascript";
 

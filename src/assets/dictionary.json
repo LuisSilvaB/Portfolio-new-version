@@ -146,9 +146,11 @@
           "es":"Esta aplicación de gestión de tareas, construida con Vite, permite registrar, eliminar, editar y cambiar el estado de sus tareas "
         },
         "technologies": [
-          "vite",
-          "tailwind",
-          "react"
+          "html",
+          "css",
+          "javascript", 
+          "graphql", 
+          "apollographql"
         ],
         "url": "https://react-task-challenge.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/react-task-challenge",
@@ -164,8 +166,8 @@
     "experiences":[
       {
         "title": {
-          "en": "Full Stack Developer - Freelance",
-          "es": "Desarrollador Full Stack - Freelance"
+          "en": "Full Stack Developer - Naz Tec",
+          "es": "Desarrollador Full Stack - Naz Tec"
         },
         "date": {
           "en": "04/2024 - present",
@@ -235,5 +237,11 @@
         }
       }
     ]
+  },
+  "contactMe": {
+    "title": {
+      "en": "Get in touch",
+      "es": "Contáctame"
+    }
   }
 }

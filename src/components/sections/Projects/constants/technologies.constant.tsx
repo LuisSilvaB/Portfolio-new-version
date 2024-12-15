@@ -13,9 +13,11 @@ import {
   SiRedux,
   SiExpress,
   SiAmazons3,
+  SiGraphql, 
+  SiApollographql, 
 } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaAws, FaReact, FaPython, FaGithub } from "react-icons/fa";
+import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
+import { FaAws, FaReact, FaPython, FaGithub, FaCss3Alt, FaHtml5,  } from "react-icons/fa";
 import { TbBrandOauth } from "react-icons/tb";
 import { BiWorld } from "react-icons/bi";
 
@@ -41,4 +43,9 @@ export const technologiesNodes = {
   flask: <SiFlask />,
   ecs: <SiAmazonec2 />,
   reactForm: <SiReacthookform />,
+  css: <FaCss3Alt />,
+  html: <FaHtml5 />,
+  javascript: <RiJavascriptFill />,
+  graphql: <SiGraphql />,
+  apollographql: <SiApollographql />,
 };
