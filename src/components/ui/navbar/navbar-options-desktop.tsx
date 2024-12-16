@@ -1,6 +1,6 @@
 import type { Lang } from '@/types/lang.type';
 import { Button } from '../button';
-import dictionary from '@/assets/dictionary.json';
+import dictionary from '@/assets/dictionary/dictionary.json'; 
 
 type NavbarDesktopOptionsProps = {
   lang: Lang;

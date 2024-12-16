@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import type { Lang } from '@/types/lang.type';
-import dictionary from '@/assets/dictionary.json';
+import dictionary from '@/assets/dictionary/dictionary.json'; 
 
 type AboutMeProps = {
   lang: Lang;

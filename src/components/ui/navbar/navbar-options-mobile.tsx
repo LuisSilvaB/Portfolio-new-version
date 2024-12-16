@@ -5,7 +5,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from "../button";
-import dictionary from "@/assets/dictionary.json";
+import dictionary from "@/assets/dictionary/dictionary.json";
 import type { Lang } from "@/types/lang.type";
 
 type NavbarMobileOptionsProps = {

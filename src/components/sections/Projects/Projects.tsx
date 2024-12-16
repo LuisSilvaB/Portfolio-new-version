@@ -1,7 +1,5 @@
 import type { Lang } from "@/types/lang.type";
-import dictionary from '@/assets/dictionary.json';
-import ProjectsCard from "./components/ProjectsCard/ProjectsCard";
-import { useInView } from "framer-motion";
+import dictionary from '@/assets/dictionary/dictionary.json'; 
 import { useRef } from "react";
 import {
   Carousel,
