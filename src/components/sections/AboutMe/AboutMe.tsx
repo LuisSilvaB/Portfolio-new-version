@@ -13,6 +13,7 @@ type AboutMeProps = {
 
 const MeInformation = ({ lang }: AboutMeProps) => {
   const dictionaryData = dictionary.aboutMe;
+  const dictionaryContact = dictionary.contactMe;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -43,14 +44,18 @@ const MeInformation = ({ lang }: AboutMeProps) => {
         {dictionaryData.description[lang]}
       </p>
       <section className="flex flex-row gap-2">
-        <Button className='group flex flex-row gap-2'>
-          <FaLinkedin className="transition-all ease-in-out text-white dark:text-blue-500" /> 
-          <span>Linkedin</span>
-        </Button>
-        <Button>
-          <FaGithub className="transition-all ease-in-out text-white dark:text-black" />
-          <span>Github</span>
-        </Button>
+        <a  target='_blank' href={dictionaryContact.contactUrls[1].url}>
+          <Button className='group flex flex-row gap-2'>
+            <FaLinkedin className="transition-all ease-in-out text-white dark:text-blue-500" /> 
+            <span>Linkedin</span>
+          </Button>
+        </a>
+        <a  target='_blank' href={dictionaryContact.contactUrls[0].url}>
+          <Button>
+            <FaGithub className="transition-all ease-in-out text-white dark:text-black" />
+            <span>Github</span>
+          </Button>
+        </a>
         <Button>Cv</Button>
       </section>
     </motion.div>

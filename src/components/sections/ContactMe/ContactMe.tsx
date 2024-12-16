@@ -57,14 +57,15 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                       icon: string;
                       url: string;
                     },
-                    index,
+                    index: number,
                   ) => (
-                    <div
-                      key={index}
-                      className="p-5 cursor-pointer flex justify-center text-gray-500 hover:text-blue-500 items-center text-3xl flex-row gap-2 bg-white dark:bg-[#060c14] dark:text-white rounded-xl h-fit w-fit transition-all ease-in-out duration-300"
-                    >
-                      {getIconByName(url.icon as iconType)}
-                    </div>
+                    <a href={url.url} key={index} target='_blank'>
+                      <div
+                        className="p-5 cursor-pointer flex justify-center text-gray-500 hover:text-blue-500 items-center text-3xl flex-row gap-2 bg-white dark:bg-[#060c14] dark:text-white rounded-xl h-fit w-fit transition-all ease-in-out duration-300"
+                      >
+                        {getIconByName(url.icon as iconType)}
+                      </div>
+                    </a>
                   ),
                 )}
               </div>

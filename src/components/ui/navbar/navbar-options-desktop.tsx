@@ -11,19 +11,29 @@ const NavbarDesktopOptions = ({ lang }: NavbarDesktopOptionsProps) => {
   return (
     <ul className="hidden lg:flex items-center">
       <li>
-        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.aboutMe[lang]}</Button>
+        <a href="#about-me">
+          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.aboutMe[lang]}</Button>
+        </a>
       </li>
       <li>
-        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.workExperience[lang]}</Button>
+        <a href="#work-experience">
+          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.workExperience[lang]}</Button>
+        </a>
       </li>
       <li>
-        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.projects[lang]}</Button>
+        <a href="#projects">
+          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.projects[lang]}</Button>
+        </a>
       </li>
       <li>
-        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.education[lang]}</Button>
+        <a href="#education">
+          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.education[lang]}</Button>
+        </a>
       </li>
       <li>
-        <Button className='uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.getInTouch[lang]}</Button>
+        <a href="#get-in-touch">
+          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.getInTouch[lang]}</Button>
+        </a>
       </li>
     </ul>
   );
