@@ -15,30 +15,30 @@ type NavbarMobileOptionsProps = {
 
 const NavbarMobileOptions = ( {lang} : NavbarMobileOptionsProps) => {
   const dictionaryData = dictionary.navbar;
-  const [activeSection, setActiveSection] = useState<number>(0);
+  const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[data-scroll]');
+    if (!sections.length) return;
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.map((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(index);
+            setActiveSection(entry.target.id);
           }
         });
       },
-      { threshold: 0.1, root: null },
+      {
+        threshold: 0.1,
+        root: null,
+      }
     );
-
     sections.forEach((section) => observer.observe(section));
-
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
 
-
-  console.log(activeSection);
 
   return (
     <Sheet>
@@ -53,10 +53,15 @@ const NavbarMobileOptions = ( {lang} : NavbarMobileOptionsProps) => {
           {
             Object.keys(dictionaryData).map((key: any, index: number) => (
               <li key={index}>
-                <a href={`#${index}`}>
-                  <Button className={`nav-link ${index === activeSection ? "border border-black": ''} `} variant="link">{dictionaryData[key as keyof typeof dictionaryData][lang]}</Button>
-                </a>
-              </li>
+              <a href={`#${key}`}>
+                <Button
+                  className={`nav-link ${key === activeSection ? "underline underline-offset-4 decoration-2 decoration-blue-500 dark:decoration-yellow-500 font-bold" : ""} `}
+                  variant="link"
+                >
+                  {dictionaryData[key as keyof typeof dictionaryData][lang]}
+                </Button>
+              </a>
+            </li>
             ))
           }
         </ul>

@@ -1,6 +1,7 @@
 import type { Lang } from '@/types/lang.type';
 import { Button } from '../button';
 import dictionary from '@/assets/dictionary/dictionary.json'; 
+import { useEffect, useState } from 'react';
 
 type NavbarDesktopOptionsProps = {
   lang: Lang;
@@ -8,33 +9,44 @@ type NavbarDesktopOptionsProps = {
 
 const NavbarDesktopOptions = ({ lang }: NavbarDesktopOptionsProps) => {
   const dictionaryData = dictionary.navbar;
+  const [activeSection, setActiveSection] = useState<string>('');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[data-scroll]');
+    if (!sections.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+        root: null,
+      }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <ul className="hidden lg:flex items-center">
-      <li>
-        <a href="#about-me">
-          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.aboutMe[lang]}</Button>
-        </a>
-      </li>
-      <li>
-        <a href="#work-experience">
-          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.workExperience[lang]}</Button>
-        </a>
-      </li>
-      <li>
-        <a href="#projects">
-          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.projects[lang]}</Button>
-        </a>
-      </li>
-      <li>
-        <a href="#education">
-          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.education[lang]}</Button>
-        </a>
-      </li>
-      <li>
-        <a href="#get-in-touch">
-          <Button className='nav-link uppercase transition-all ease-in-out duration-500 font-semibold' variant="link">{dictionaryData.getInTouch[lang]}</Button>
-        </a>
-      </li>
+      {Object.keys(dictionaryData).map((key: any, index: number) => (
+        <li key={index}>
+          <a href={`#${key}`}>
+            <Button
+              className={`nav-link transition-all ease-in-out duration-500 ${key === activeSection ? "underline underline-offset-4 decoration-2 decoration-blue-500 dark:decoration-yellow-500 font-bold" : ""} `}
+              variant="link"
+            >
+              {dictionaryData[key as keyof typeof dictionaryData][lang]}
+            </Button>
+          </a>
+        </li>
+      ))}
     </ul>
   );
 };

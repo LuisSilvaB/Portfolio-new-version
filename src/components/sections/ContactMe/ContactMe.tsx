@@ -41,6 +41,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
   })
 
   return (
+    
     <div className="relative transition-all ease-in-out text-gray-800 w-full max-w-7xl h-full min-h-[500px] lg:min-h-[550px] flex flex-col items-start justify-center gap-6 p-2  lg:p-0 mt-10 mb-5">
       <div className="w-full flex flex-col-reverse md:flex-row gap-4 h-full  rounded-xl p-1 lg:p-4 text-white ">
        
@@ -71,7 +72,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
               </div>
             </div>
 
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl items-end flex flex-row w-full p-6 gap-10 ">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl items-start flex flex-row w-full p-6 gap-10 ">
               <div className="flex flex-col">
                 <p className="font-bold text-lg font-satoshi dark:text-white">
                   Navegación
