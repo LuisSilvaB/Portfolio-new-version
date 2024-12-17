@@ -8,6 +8,7 @@ import WorkExperience from "@/components/sections/WorkExperience";
 import Technologies from "@/components/sections/Technologies/Technologies";
 import Projects from "@/components/sections/Projects/Projects";
 import ContactMe from "@/components/sections/ContactMe/ContactMe";
+import { Toaster } from "@/components/ui/toaster";
 
 export function getStaticPaths() {
   return [
@@ -40,4 +41,5 @@ const { lang } = Astro.params;
       <ContactMe lang = {lang as Lang} client:visible/>
     </section>
   </main>
+  <Toaster client:visible/>
 </Layout>

@@ -22,3 +22,4 @@ const contactSchema = z.object({
 });
 
 export const ContactSchema = contactSchema;
+export type ContactSchemaType = z.infer<typeof contactSchema>;
