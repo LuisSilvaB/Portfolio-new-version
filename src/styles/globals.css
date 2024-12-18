@@ -27,7 +27,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
+    --tertiary-perzonalized-1: 24 9.8% 10%;
+    --primary-personalized-1: 24 81% 59%;
   }
   .dark {
     --background: 20 14.3% 4.1%;
@@ -92,5 +94,20 @@
     font-weight: 100 900;
     font-display: swap;
     src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'PoppinsExtraBold';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
   }
 }

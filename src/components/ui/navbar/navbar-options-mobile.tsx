@@ -58,7 +58,7 @@ const NavbarMobileOptions = ( {lang} : NavbarMobileOptionsProps) => {
                   className={`nav-link ${key === activeSection ? "underline underline-offset-4 decoration-2 decoration-blue-500 dark:decoration-yellow-500 font-bold" : ""} `}
                   variant="link"
                 >
-                  {dictionaryData[key as keyof typeof dictionaryData][lang]}
+                  {dictionaryData[key as keyof typeof dictionaryData].title[lang]}
                 </Button>
               </a>
             </li>

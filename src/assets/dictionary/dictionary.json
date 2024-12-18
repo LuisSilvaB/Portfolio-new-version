@@ -1,23 +1,35 @@
 {
   "navbar": {
-    "aboutMe":{
-      "en":"About Me",
-      "es":"Sobre mi"
+    "aboutMe": {
+      "title":{
+        "en": "About Me",
+        "es": "Sobre mi"
+      },
+      "id": "about-ne"
     },
     "workExperience": {
-      "en": "Work Experience",
-      "es": "Experiencia laboral"
+      "title":{
+        "en": "Work Experience",
+        "es": "Experiencia laboral"
+      },
+      "id": "work-experience"
     },
     "projects": {
-      "en": "Projects",
-      "es": "Proyectos"
+      "title":{
+        "en": "Projects",
+        "es": "Proyectos"
+      },
+      "id": "projects"
     },
     "getInTouch": {
-      "en": "Get in touch",
-      "es": "Contáctame"
+      "title":{
+        "en": "Get in touch",
+        "es": "Contáctame"
+      },
+      "id": "get-in-touch"
     }
   },
-  "aboutMe":{
+  "aboutMe": {
     "title": {
       "en": "Hi, I'm",
       "es": "Hola, soy"
@@ -30,7 +42,7 @@
       "en": "I'm a Bachelor in Computer and Systems Engineering 🎓",
       "es": "Bachiller en Ingeniería de Sistemas y Computación 🎓"
     },
-    "description":{
+    "description": {
       "en": "I am a web developer with 1 year of experience in projects covering both frontend and backend development. I have been involved in creating and managing user interfaces, as well as developing and maintaining server-side services and microservices, using frameworks that ensure well-structured and scalable code.",
       "es": "Soy un desarrollador web con 1 año de experiencia en proyectos que abarcan tanto el desarrollo frontend como backend. He participado en la creación y administración de interfaces de usuario y en el desarrollo y mantenimiento de servicios y microservicios en el servidor, utilizando frameworks que garantizan un código bien estructurado y escalable."
     },
@@ -43,9 +55,9 @@
       "styled",
       "lightsail",
       "s3",
-      "ec2",  
+      "ec2",
       "express",
-      "mysql", 
+      "mysql",
       "postgres",
       "supabase"
     ]
@@ -60,23 +72,24 @@
       "es": "My Colección de Proyectos"
     },
     "secondaryDescription": {
-      "en":"Here you can find some of my last personal projects",
-      "es":"Aquí puedes ver algunos de mis últimos proyectos personales realizados"
+      "en": "Here you can find some of my last personal projects",
+      "es": "Aquí puedes ver algunos de mis últimos proyectos personales realizados"
     },
     "projects": [
       {
-        "title":{
-          "en":"Cake Harmony",
-          "es":"Cake Harmony"
+        "title": {
+          "en": "Cake Harmony",
+          "es": "Cake Harmony"
         },
-        "description":{
-          "en":"A store management system that allows users to manage their inventory, orders, and payments.",
-          "es":"Un sistema de gestión de tienda que permite a los usuarios gestionar su inventario, pedidos y pagos."
+        "description": {
+          "en": "A store management system that allows users to manage their inventory, orders, and payments.",
+          "es": "Un sistema de gestión de tienda que permite a los usuarios gestionar su inventario, pedidos y pagos."
         },
         "technologies": [
           "nextjs",
           "tailwind",
           "supabase",
+          "typescript",
           "react",
           "oauth",
           "chadcn",
@@ -85,23 +98,23 @@
         ],
         "url": "https://cake-harmony-luissilvabs-projects.vercel.app/",
         "git_url": null,
-        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/cake-harmony.webp?t=2024-12-10T00%3A31%3A16.419Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/cake-harmony.webp?t=2024-12-10T00%3A31%3A16.419Z"
       },
       {
-        "title":{
-          "en":"Voice quiz app",
-          "es":"Voice quiz app"
+        "title": {
+          "en": "Voice quiz app",
+          "es": "Voice quiz app"
         },
-        "description":{
-          "en":"This is a project that allows teachers to use artificial intelligence to create questions and quizzes.",
-          "es":"Este es un proyecto que permite a los profesores usar la inteligencia artificial para crear preguntas y cuestionarios."
+        "description": {
+          "en": "This is a project that allows teachers to use artificial intelligence to create questions and quizzes.",
+          "es": "Este es un proyecto que permite a los profesores usar la inteligencia artificial para crear preguntas y cuestionarios."
         },
         "technologies": [
           "vite",
           "tailwind",
           "supabase",
+          "typescript",
           "react",
-          "python",
           "oauth",
           "redux",
           "python",
@@ -109,72 +122,64 @@
         ],
         "url": "https://voice-quiz-app.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/voice-quiz-app",
-        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/voice-quiz.webp?t=2024-12-10T00%3A25%3A15.234Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/voice-quiz.webp?t=2024-12-10T00%3A25%3A15.234Z"
       },
       {
-        "title":{
-          "en":"Rextie Clone app",
-          "es":"Rextie Clone app"
+        "title": {
+          "en": "Rextie Clone app",
+          "es": "Rextie Clone app"
         },
-        "description":{
-          "en":"This is a ui representation of the Rexie app.",
-          "es":"Esta es una representación ui de la aplicación Rexie."
+        "description": {
+          "en": "This is a ui representation of the Rexie app.",
+          "es": "Esta es una representación ui de la aplicación Rexie."
         },
-        "technologies": [
-          "nextjs",
-          "tailwind",
-          "react"
-        ],
+        "technologies": ["nextjs", "tailwind", "react"],
         "url": "https://rextie-clone-app.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/rextie-clone-app",
-        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/rextie-clone.webp?t=2024-12-10T00%3A15%3A43.425Z"
-      }, 
-      {
-        "title":{
-          "en":"KDS Challenge",
-          "es":"KDS Challenge"
-        },
-        "description":{
-          "en":"Order management application, built with Vite, that allows you to record order status efficiently.",
-          "es":"Aplicación de gestión de pedidos, construida con Vite, que permite registrar el estado de pedido de manera eficiente."
-        },
-        "technologies": [
-          "vite",
-          "tailwind",
-          "react"
-        ],
-        "url": "https://challenge-fronted-kds.vercel.app/",
-        "git_url": "https://github.com/LuisSilvaB/challenge-fronted-kds",
-        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/KDS-Challenge_compresed.webp?t=2024-12-11T01%3A54%3A16.211Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/rextie-clone.webp?t=2024-12-10T00%3A15%3A43.425Z"
       },
       {
-        "title":{
-          "en":"Task Challenge",
-          "es":"Task Challenge"
+        "title": {
+          "en": "KDS Challenge",
+          "es": "KDS Challenge"
         },
-        "description":{
-          "en":"This task management application, built with Vite, register, delete, edit, and change the status of your tasks",
-          "es":"Esta aplicación de gestión de tareas, construida con Vite, permite registrar, eliminar, editar y cambiar el estado de sus tareas "
+        "description": {
+          "en": "Order management application, built with Vite, that allows you to record order status efficiently.",
+          "es": "Aplicación de gestión de pedidos, construida con Vite, que permite registrar el estado de pedido de manera eficiente."
+        },
+        "technologies": ["vite", "tailwind", "react"],
+        "url": "https://challenge-fronted-kds.vercel.app/",
+        "git_url": "https://github.com/LuisSilvaB/challenge-fronted-kds",
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/KDS-Challenge_compresed.webp?t=2024-12-11T01%3A54%3A16.211Z"
+      },
+      {
+        "title": {
+          "en": "Task Challenge",
+          "es": "Task Challenge"
+        },
+        "description": {
+          "en": "This task management application, built with Vite, register, delete, edit, and change the status of your tasks",
+          "es": "Esta aplicación de gestión de tareas, construida con Vite, permite registrar, eliminar, editar y cambiar el estado de sus tareas "
         },
         "technologies": [
           "html",
           "css",
-          "javascript", 
-          "graphql", 
+          "javascript",
+          "graphql",
           "apollographql"
         ],
         "url": "https://react-task-challenge.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/react-task-challenge",
-        "img_url":"https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/RavnTaskChallenge.webp?t=2024-12-11T02%3A16%3A06.209Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/RavnTaskChallenge.webp?t=2024-12-11T02%3A16%3A06.209Z"
       }
     ]
   },
-  "workExperience":{
-    "title":{
+  "workExperience": {
+    "title": {
       "en": "Work Experience",
       "es": "Experiencia laboral"
     },
-    "experiences":[
+    "experiences": [
       {
         "title": {
           "en": "Full Stack Developer - Naz Tec",
@@ -189,7 +194,7 @@
           "es": "Diseñé y implementé interfaces de usuario basadas en requisitos y directrices de usuario, garantizando una experiencia visual y funcional de alta calidad. Creé y mantení servicios de backend y microservicios para apoyar funcionalidades clave, incluyendo un servicio de scraping que mantiene la información en la aplicación principal actualizada."
         },
         "techStack": {
-          "title":{
+          "title": {
             "en": "Tech Stack",
             "es": "Tecnologías utilizadas"
           },
@@ -208,12 +213,12 @@
           "en": "01/2024 - 04/2024",
           "es": "01/2024 - 04/2024"
         },
-        "description":{
-          "en": "I developed user interfaces based on Figma designs, ensuring proper functionality and optimization for a smooth and efficient user experience.", 
+        "description": {
+          "en": "I developed user interfaces based on Figma designs, ensuring proper functionality and optimization for a smooth and efficient user experience.",
           "es": "Desarrollé interfaces de usuario basadas en diseños de Figma, asegurando el correcto funcionamiento y la optimización para una experiencia de usuario fluida y eficiente."
         },
         "techStack": {
-          "title":{
+          "title": {
             "en": "Tech Stack",
             "es": "Tecnologías utilizadas"
           },
@@ -232,12 +237,12 @@
           "en": "06/2023- 11/2023",
           "es": "06/2023- 11/2023"
         },
-        "description":{
-          "en": "I performed maintenance and process improvement on the website, applying solutions.", 
+        "description": {
+          "en": "I performed maintenance and process improvement on the website, applying solutions.",
           "es": "Realicé mantenimiento y mejora de procesos en la página web, aplicando soluciones."
         },
         "techStack": {
-          "title":{
+          "title": {
             "en": "Tech Stack",
             "es": "Tecnologías utilizadas"
           },
@@ -250,9 +255,13 @@
     ]
   },
   "contactMe": {
-    "title": {
-      "en": "Get in touch",
-      "es": "Contáctame"
+    "title-fist-part": {
+      "en": "LET'S WORK",
+      "es": "TRABAJEMOS"
+    },
+    "title-second-part": {
+      "en": "TOGETHER",
+      "es": "JUNTOS"
     },
     "contactUrls": [
       {
@@ -275,6 +284,99 @@
         "icon": "gmail",
         "url": "mailto:luisarmandoballadares@gmail.com"
       }
-    ]
+    ],
+    "projectsTitle": {
+      "en": "Projects",
+      "es": "Proyectos"
+    },
+    "form": {
+      "to": {
+        "errorMessages": {
+          "en": "Must be a valid email address",
+          "es": "Debe ser una dirección de correo válida"
+        }
+      }, 
+      "from": {
+        "placeholder": {
+          "en": "From",
+          "es": "De"
+        },
+        "helperText": {
+          "en": "Insert your email address",
+          "es": "Inserte su dirección de correo electrónico"
+        },
+        "errorMessages": {
+          "en": "Must be a valid email address",
+          "es": "Debe ser una dirección de correo válida"
+        }
+      },
+      "firstName": {
+        "placeholder": {
+          "en": "First Name",
+          "es": "Nombre"
+        },
+        "helperText": {
+          "en": "Write your first name",
+          "es": "Escriba su nombre"
+        },
+        "errorMessages": {
+          "en": "The first name must be at least 3 characters",
+          "es": "El nombre debe tener al menos 3 caracteres"
+        }},
+        "lastName": {
+          "placeholder": {
+            "en": "Last Name",
+            "es": "Apellido"
+          },
+          "helperText": {
+            "en": "Write your last name",
+            "es": "Escriba su apellido"
+          },
+          "errorMessages": {
+            "en": "The last name must be at least 3 characters",
+            "es": "El apellido debe tener al menos 3 caracteres"
+          }
+        },
+        "subject": {
+          "placeholder": {
+            "en": "Subject",
+            "es": "Asunto"
+          },
+          "helperText": {
+            "en": "Write your subject",
+            "es": "Escriba su asunto"
+          }, 
+          "errorMessages": {
+            "en": "The subject must be at least 3 characters",
+            "es": "El asunto debe tener al menos 3 caracteres"
+          }
+        },
+        "message": {
+          "placeholder": {
+            "en": "Message",
+            "es": "Mensaje"
+          },
+          "helperText": {
+            "en": "Write your message",
+            "es": "Escriba su mensaje"
+          },
+          "errorMessages": {
+            "en": "The message must be at least 3 characters",
+            "es": "El mensaje debe tener al menos 3 caracteres"
+          }
+        }
+      },
+      "naviagationTitle": {
+        "en": "Navigation",
+        "es": "Navegación"
+      },
+      "copyright": {
+        "en": "Copyright 2024. All rights reserved.",
+        "es": "Copyright 2024. Todos los derechos reservados."
+      },
+      "submitButton": {
+        "en": "Send",
+        "es": "Enviar"
+      }
+    }
   }
-}

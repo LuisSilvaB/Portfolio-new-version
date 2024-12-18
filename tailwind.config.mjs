@@ -10,6 +10,7 @@ export default {
       "black_sandbag": "url('/public/img/black_sandbag.jpg')",
       "black_sand": "url('/public/img/black_sand.jpg')",
       "sakura": "url('/public/img/sakura_2.jpg')",
+      "dark-beach": "url('/public/img/dark-beach.jpg')",
     }, 
     fontFamily: {
 			sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -19,6 +20,8 @@ export default {
       monoton: ['Monoton', 'sans-serif'],
       plaster: ['Plaster', 'sans-serif'],
       satoshi: ['Satoshi', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif'],
+      poppinsExtraBold: ['PoppinsExtraBold', 'sans-serif'],
     },
     extend: {
       borderRadius: {
@@ -67,6 +70,11 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+
+        // colors 
+        "tertiary-perzonalized-1": "hsl(var(--tertiary-perzonalized-1))", // #151312
+        "secondary-perzonalized-1": "#353334", // #1f1d1b
+        "primary-perzonalized-1": "#f46c38", // #f46c38
       },
     },
   },

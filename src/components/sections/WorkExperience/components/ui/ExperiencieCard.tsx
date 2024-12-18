@@ -18,7 +18,7 @@ const ExperienceCard = ({ id, lang, experience }: ExperiencieCardProps) => {
 
 
   return (
-    <motion.div ref={ref} className="w-full min-h-[550px] lg:min-h-[350px] flex flex-row transition-all ease-in-out duration-200">
+    <motion.div ref={ref} className="w-full min-h-[300px] lg:min-h-[350px] flex flex-row transition-all ease-in-out duration-200">
       {/** Number */}
       <div className="hidden w-[35%] duration-500 lg:flex items-start pt-8">
         <p className={`text-9xl font-bold text-blue-600 dark:text-yellow-500 transition-all ease-in-out duration-500 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-28"}`}>

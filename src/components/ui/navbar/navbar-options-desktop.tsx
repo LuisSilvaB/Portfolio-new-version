@@ -37,12 +37,12 @@ const NavbarDesktopOptions = ({ lang }: NavbarDesktopOptionsProps) => {
     <ul className="hidden lg:flex items-center">
       {Object.keys(dictionaryData).map((key: any, index: number) => (
         <li key={index}>
-          <a href={`#${key}`}>
+          <a href={`#${dictionaryData[key as keyof typeof dictionaryData].id}`}>
             <Button
-              className={`nav-link transition-all ease-in-out duration-500 ${key === activeSection ? "underline underline-offset-4 decoration-2 decoration-blue-500 dark:decoration-yellow-500 font-bold" : ""} `}
+              className={`nav-link transition-all ease-in-out duration-500 ${dictionaryData[key as keyof typeof dictionaryData].id === activeSection ? "underline underline-offset-4 decoration-2 decoration-blue-500 dark:decoration-yellow-500 font-bold" : ""} `}
               variant="link"
             >
-              {dictionaryData[key as keyof typeof dictionaryData][lang]}
+              {dictionaryData[key as keyof typeof dictionaryData].title[lang]}
             </Button>
           </a>
         </li>

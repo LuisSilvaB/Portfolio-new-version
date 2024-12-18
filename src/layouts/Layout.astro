@@ -6,7 +6,7 @@ const { lang } = Astro.params;
 ---
 
 <!doctype html>
-<html lang={lang} class="light">
+<html lang={lang} class="light bg-[#F5F5F5] dark:bg-[#060c14]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -16,7 +16,7 @@ const { lang } = Astro.params;
 		<title>Luis Silva</title>
 		<ClientRouter/>
 	</head>
-	<body>
+	<body class="bg-[#F5F5F5] dark:bg-[#060c14]">
 			<slot />
 	</body>
 </html>
@@ -24,7 +24,7 @@ const { lang } = Astro.params;
 <style>
 	html,
 	body {
-		/* background-image: url('/public/img/grey_sandbag.png'); */
+		scroll-padding-top: 5rem;
 		background-repeat: repeat;
 		z-index: 100;
 		margin: 0;
