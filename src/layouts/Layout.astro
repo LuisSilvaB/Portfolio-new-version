@@ -24,7 +24,7 @@ const { lang } = Astro.params;
 <style>
 	html,
 	body {
-		scroll-padding-top: 5rem;
+		scroll-padding-top: 0rem;
 		background-repeat: repeat;
 		z-index: 100;
 		margin: 0;
@@ -32,5 +32,8 @@ const { lang } = Astro.params;
 		min-height: 100vh;
 		scroll-behavior: smooth;
 		height: auto;
+		@media (min-width: 768px) {
+			scroll-padding-top: 5rem;
+		}
 	}
 </style>

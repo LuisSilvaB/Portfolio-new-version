@@ -72,9 +72,9 @@ export default {
         },
 
         // colors 
-        "tertiary-perzonalized-1": "hsl(var(--tertiary-perzonalized-1))", // #151312
-        "secondary-perzonalized-1": "#353334", // #1f1d1b
-        "primary-perzonalized-1": "#f46c38", // #f46c38
+        "dark-tertiary-perzonalized": "#151312", // #151312
+        "dark-secondary-perzonalized": "#353334", // #1f1d1b
+        "dark-primary-perzonalized": "#f46c38", // #f46c38
       },
     },
   },

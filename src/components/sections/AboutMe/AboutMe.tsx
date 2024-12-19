@@ -22,7 +22,7 @@ const MeInformation = ({ lang }: AboutMeProps) => {
     >
       <h1 className="text-2xl dark:text-white lg:text-5xl font-extrabold tracking-tight leading-tight">
         {dictionaryData.title[lang]}{" "}
-        <span className="text-blue-500 dark:text-yellow-500">
+        <span className="text-blue-500 dark:text-dark-primary-perzonalized">
           Luis Silva Balladares
         </span>
       </h1>

@@ -26,20 +26,20 @@ const dictionarData = dictionary.navbar;
   <Navbar lang={lang as Lang} client:visible/>
   <main id="main" class="w-full h-auto flex flex-col justify-start items-start ">
     
-    <section id={dictionarData.aboutMe.id} data-scroll class="w-full  flex justify-center flex-col items-center bg-[#F5F5F5] h-fit dark:bg-tertiary-perzonalized-1 dark:bg-[url('')]">
+    <section id={dictionarData.aboutMe.id} data-scroll class="w-full  flex justify-center flex-col items-center bg-[#F5F5F5] h-fit dark:bg-dark-tertiary-perzonalized dark:bg-[url('')]">
       <AboutMe lang = {lang as Lang} client:visible/>
       <Technologies client:visible/>
     </section>
 
-    <section id={dictionarData.workExperience.id} data-scroll class="w-full h-full min-h-[900px] flex justify-center items-center bg-white dark:bg-tertiary-perzonalized-1">
+    <section id={dictionarData.workExperience.id} data-scroll class="w-full h-full min-h-[900px] flex justify-center items-center bg-white dark:bg-dark-tertiary-perzonalized">
       <WorkExperience lang = {lang as Lang} client:visible/>
     </section>
 
-    <section id={dictionarData.projects.id} data-scroll class="w-full h-full min-h-[900px] flex justify-center items-center bg-[#F5F5F5] dark:bg-tertiary-perzonalized-1">
+    <section id={dictionarData.projects.id} data-scroll class="w-full h-full min-h-[900px] flex justify-center items-center bg-[#F5F5F5] dark:bg-dark-tertiary-perzonalized">
       <Projects lang = {lang as Lang} client:visible/>
     </section>
 
-    <section id={dictionarData.getInTouch.id} data-scroll class="w-full h-auto flex justify-center items-center bg-white dark:bg-tertiary-perzonalized-1">
+    <section id={dictionarData.getInTouch.id} data-scroll class="w-full h-auto flex justify-center items-center bg-white dark:bg-dark-tertiary-perzonalized">
       <ContactMe lang = {lang as Lang} client:visible/>
     </section>
   </main>

@@ -176,8 +176,14 @@
   },
   "workExperience": {
     "title": {
-      "en": "Work Experience",
-      "es": "Experiencia laboral"
+      "title-first-part":{
+        "en":"Work", 
+        "es":"Experiencia"
+      },
+      "title-second-part":{
+        "en":"Experience", 
+        "es":"Laboral"
+      }
     },
     "experiences": [
       {

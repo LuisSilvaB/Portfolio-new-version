@@ -39,12 +39,12 @@ const Navbar = ({ lang }: NavbarProps) => {
     <motion.nav
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className={`${isDown? "backdrop-blur-sm dark:backdrop-blur-sm bg-white/20": "bg-white backdrop-blur-0"} font-satoshi font-bold w-full h-14 flex items-center sticky top-0    dark:bg-[url('')] flex-row p-4 z-20 dark:bg-[#060c14] justify-center transition-all ease-in-out duration-200`} 
+      className={`${isDown? "backdrop-blur-sm dark:backdrop-blur-sm bg-white/20": "bg-white backdrop-blur-0"} font-satoshi font-bold w-full h-14 flex items-center sticky top-0  flex-row p-4 z-20 dark:bg-dark-tertiary-perzonalized justify-center transition-all ease-in-out duration-200`} 
     >
       <div className="w-full flex justify-between items-center max-w-6xl">
         <section className="flex items-center gap-2">
           <NavbarMobileOptions lang={lang} />
-          <p className="text-2xl intersect:opacity-100 transition-opacity dark:text-yellow-500">
+          <p className="text-2xl intersect:opacity-100 transition-opacity dark:text-dark-primary-perzonalized font-poppinsExtraBold">
             lsilvaball.
           </p>
         </section>

@@ -30,7 +30,7 @@ const Technologies = () => {
   );
 
   return (
-    <motion.div className=" text-gray-500 text-2xl lg:text-5xl mb-10 lg:mb-32 w-full max-w-6xl gap-10 flex flex-col">
+    <motion.div className=" text-2xl lg:text-5xl mb-10 lg:mb-32 w-full max-w-6xl gap-10 flex flex-col">
       <div className="hidden lg:flex w-full flex-wrap gap-10 justify-start items-center">
         {dictionaryData.technologies.map((icon:string, index:number) => <TechnologiesCard key={index} id={index + 1} icon={getIconByName(icon as iconType)} name={icon} />)}
       </div>
@@ -48,7 +48,7 @@ const Technologies = () => {
           {dictionaryData.technologies.map((icon:string, index:number) => (
             <CarouselItem
               key={index}
-              className={`w-full text-2xl md:basis-1/2 lg:basis-[15%] gap-4 py-3 flex items-center`}
+              className={`w-full text-2xl md:basis-1/2 lg:basis-[15%] gap-4 py-3 text-white flex items-center`}
             >
               {getIconByName(icon as iconType)}
               <p className="font-semibold">{icon}</p>
