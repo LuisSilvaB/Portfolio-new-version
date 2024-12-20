@@ -49,11 +49,11 @@ const NavbarMobileOptions = ( {lang} : NavbarMobileOptionsProps) => {
       onOpenChange={toggle.onToggle}
     >
       <SheetTrigger className="flex items-center text-white justify-center lg:hidden">
-        <VscListSelection className="dark:text-white" />
+        <VscListSelection className="text-blue-600 dark:text-white" />
       </SheetTrigger>
       <SheetContent
         side={"left"}
-        className="flex flex-col text-white  justify-start items-start"
+        className="flex flex-col text-blue-800 dark:text-white  justify-start items-start"
       >
         <SheetHeader>
           <SheetTitle></SheetTitle>

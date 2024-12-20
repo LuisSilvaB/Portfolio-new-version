@@ -48,7 +48,7 @@ const Technologies = () => {
           {dictionaryData.technologies.map((icon:string, index:number) => (
             <CarouselItem
               key={index}
-              className={`w-full text-2xl md:basis-1/2 lg:basis-[15%] gap-4 py-3 text-white flex items-center`}
+              className={`w-full text-2xl md:basis-1/2 lg:basis-[15%] gap-4 py-3 text-gray-600 dark:text-white flex items-center`}
             >
               {getIconByName(icon as iconType)}
               <p className="font-semibold">{icon}</p>

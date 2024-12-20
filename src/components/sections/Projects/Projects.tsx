@@ -9,7 +9,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import ProjectCardV2 from "./components/ ProjectCardV2/ ProjectCardV2";
 import { LuBlocks } from "react-icons/lu";
-
+import { motion } from "framer-motion";
 
 type ProjectsProps = {
   lang: Lang;
@@ -27,9 +27,15 @@ const Projects = ({ lang }: ProjectsProps) => {
           <LuBlocks className="text-xl lg:text-3xl text-blue-500  dark:text-primary-perzonalized-1" />
         </div> */}
         <div className="flex flex-col gap-4">
-          <h2 className="text-2xl lg:text-5xl text-blue-500 dark:text-dark-primary-perzonalized uppercase font-bold font-poppinsExtraBold">
+          <motion.h2
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="text-4xl lg:text-7xl text-blue-500 dark:text-dark-primary-perzonalized uppercase font-bold font-poppinsExtraBold" 
+          >
             {dictionaryData.title[lang]}
-          </h2>
+          </motion.h2>
         </div>
       </div>
       <Carousel

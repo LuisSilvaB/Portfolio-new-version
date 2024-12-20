@@ -20,10 +20,10 @@ import {
 import { getIconByName } from '@/utils/getIconByName';
 import type { iconType } from '@/types/icon.type';
 import { useToast } from '@/hooks/use-toast';
-import { Fullscreen } from 'lucide-react';
 import { useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { createContactSchema } from './utils/generateSchema';
+import { motion } from 'framer-motion';
 
 type ContactMeProps = {
   lang: Lang;
@@ -140,13 +140,26 @@ const ContactMe = ( { lang } : ContactMeProps) => {
       <div className="w-full flex flex-col-reverse md:flex-row gap-4 h-full  rounded-xl p-1 lg:p-4 text-white ">
         <div className=" flex flex-col items-start justify-start w-full gap-1">
           <div className="flex flex-col w-full items-start lg:justify-center lg:items-start mb-4">
-            <h2 className="uppercase text-4xl text-blue-500  dark:text-dark-primary-perzonalized lg:text-7xl font-poppinsExtraBold w-fit text-start">
+            <motion.h2
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="uppercase text-4xl text-blue-500 dark:text-dark-primary-perzonalized lg:text-7xl font-poppinsExtraBold w-fit text-start"
+            >
               {dictionaryData["title-fist-part"][lang]}
-            </h2>
-            <h2 className="text-dark-secondary-perzonalized text-4xl lg:text-7xl font-poppinsExtraBold">
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-dark-secondary-perzonalized text-4xl lg:text-7xl font-poppinsExtraBold"
+            >
               {dictionaryData["title-second-part"][lang]}
-            </h2>
+            </motion.h2>
           </div>
+
           <div className="flex flex-col w-full gap-3 items-start text-gray-800 h-full">
             <div className="bg-gray-100 dark:bg-dark-secondary-perzonalized w-fit h-fit rounded-xl p-4">
               <div className=" w-fit flex flex-row flex-wrap justify-start  items-start gap-4">
@@ -159,7 +172,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                     index: number,
                   ) => (
                     <a href={url.url} key={index} target="_blank">
-                      <div className="p-3 cursor-pointer flex justify-center text-gray-500 hover:text-blue-500 items-center text-2xl flex-row gap-2 bg-white dark:bg-dark-secondary-perzonalized dark:text-white rounded-xl h-fit w-fit transition-all ease-in-out duration-300 border">
+                      <div className="p-3 cursor-pointer flex justify-center text-gray-500 hover:text-blue-500 items-center text-2xl flex-row gap-2 bg-white dark:bg-dark-secondary-perzonalized  dark:text-white rounded-xl h-fit w-fit transition-all ease-in-out duration-300 border">
                         {getIconByName(url.icon as iconType)}
                       </div>
                     </a>
@@ -183,7 +196,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                         <a
                           href={`#${dictionaryDataNav[key as keyof typeof dictionaryDataNav].id}`}
                         >
-                          <p className="text-gray-500 font-normal">
+                          <p className="text-gray-500 hover:text-blue-600 hover:underline font-medium dark:hover:text-dark-primary-perzonalized transition-all ease-in-out duration-300">
                             {
                               dictionaryDataNav[
                                 key as keyof typeof dictionaryDataNav
@@ -206,9 +219,11 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                       key={index}
                       className="flex flex-row gap-2 items-center cursor-pointer"
                     >
-                      <p className="text-gray-500 font-normal">
-                        {key.title[lang]}
-                      </p>
+                      <a href={`#projects`}>
+                        <p className="text-gray-500 hover:text-blue-600 hover:underline font-medium dark:hover:text-dark-primary-perzonalized transition-all ease-in-out duration-300"> 
+                          {key.title[lang]}
+                        </p>
+                      </a>
                     </li>
                   ))}
                 </ul>
