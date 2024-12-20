@@ -1,14 +1,14 @@
 import type { Lang } from "@/types/lang.type";
 import dictionary from '@/assets/dictionary/dictionary.json'; 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import { type CarouselApi } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay";
 import ProjectCardV2 from "./components/ ProjectCardV2/ ProjectCardV2";
-import { LuBlocks } from "react-icons/lu";
 import { motion } from "framer-motion";
 
 type ProjectsProps = {
@@ -17,9 +17,26 @@ type ProjectsProps = {
 
 const Projects = ({ lang }: ProjectsProps) => {
   const dictionaryData = dictionary.Projects;
+  const [api, setApi] = useState<CarouselApi>()
+  const [count, setCount] = useState<number>(0)  
+  const [current, setCurrent] = useState<number>(0)
+
   const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+ 
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+ 
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
   return (
     <div className="transition-transform my-20 justify-start duration-1000 bg-white dark:bg-dark-secondary-perzonalized shadow-sm ease-[cubic-bezier(0.17, 0.55, 0.55, 1)] delay-500 text-gray-800 w-full lg:rounded-3xl lg:p-10  max-w-7xl h-fit lg:min-h-[600px] lg:h-auto flex flex-col items-start overflow-hidden justify-start gap-6 px-4 lg:px-10 py-10">
       <div className="w-full flex flex-wrap flex-row gap-4 justify-start items-center h-fit">
@@ -32,13 +49,14 @@ const Projects = ({ lang }: ProjectsProps) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-4xl lg:text-7xl text-blue-500 dark:text-dark-primary-perzonalized uppercase font-bold font-poppinsExtraBold" 
+            className="text-4xl lg:text-7xl text-blue-500 dark:text-dark-primary-perzonalized uppercase font-bold font-poppinsExtraBold"
           >
             {dictionaryData.title[lang]}
           </motion.h2>
         </div>
       </div>
       <Carousel
+        setApi={setApi}
         plugins={[plugin.current]}
         opts={{
           loop: true,
@@ -62,6 +80,9 @@ const Projects = ({ lang }: ProjectsProps) => {
           ))}
         </CarouselContent>
       </Carousel>
+      <div className="py-2 text-center w-full flex justify-center items-center text-sm text-muted-foreground">
+        Slide {current} of {count}
+      </div>
     </div>
   );
 }
