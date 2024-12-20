@@ -53,12 +53,12 @@ const ProjectCardV2 = ({ id, project, lang } : ProjectsCardV2Props) => {
       </div>
       <div className="relative flex-1 h-full py-8 pr-4">
         <motion.img
-          initial={{ opacity: 0, filter: "blur(10px)" }}
-          whileInView={{
-            opacity: 1,
-            filter: "blur(0px)",
-            style: { transform: "scale(1.1)" },
-          }}
+          // initial={{ opacity: 0, filter: "blur(10px)" }}
+          // whileInView={{
+          //   opacity: 1,
+          //   filter: "blur(0px)",
+          //   style: { transform: "scale(1.1)" },
+          // }}
           transition={{ duration: 0.5 }}
           src={project.img_url}
           alt="Placeholder"
