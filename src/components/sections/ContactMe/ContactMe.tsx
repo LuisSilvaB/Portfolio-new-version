@@ -141,7 +141,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
         <div className=" flex flex-col items-start justify-start w-full gap-1">
           <div className="flex flex-col w-full items-start lg:justify-center lg:items-start mb-4">
             <motion.h2
-              initial={{ opacity: 0, x: 200 }}
+              initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -150,7 +150,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
               {dictionaryData["title-fist-part"][lang]}
             </motion.h2>
             <motion.h2
-              initial={{ opacity: 0, y: 200 }}
+              initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
               whileInView={{ opacity: 1, y: 0 }}
