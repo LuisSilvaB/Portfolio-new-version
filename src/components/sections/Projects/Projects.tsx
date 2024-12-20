@@ -45,7 +45,7 @@ const Projects = ({ lang }: ProjectsProps) => {
         </div> */}
         <div className="flex flex-col gap-4">
           <motion.h2
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -15,7 +15,7 @@ const WorkExperience = ({ lang }: WorkExperienceProps) => {
     >
       <div className="flex flex-col">
         <motion.h2
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -24,7 +24,7 @@ const WorkExperience = ({ lang }: WorkExperienceProps) => {
           {dictionaryData.title["title-first-part"][lang]}
         </motion.h2>
         <motion.h2
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           whileInView={{ opacity: 1, y: 0 }}
