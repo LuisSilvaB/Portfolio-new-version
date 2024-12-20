@@ -98,7 +98,7 @@
         ],
         "url": "https://cake-harmony-luissilvabs-projects.vercel.app/",
         "git_url": null,
-        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/cake-harmony.webp?t=2024-12-10T00%3A31%3A16.419Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/cake-harmony.webp"
       },
       {
         "title": {
@@ -122,7 +122,7 @@
         ],
         "url": "https://voice-quiz-app.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/voice-quiz-app",
-        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/voice-quiz.webp?t=2024-12-10T00%3A25%3A15.234Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/voice-quiz.webp"
       },
       {
         "title": {
@@ -136,7 +136,7 @@
         "technologies": ["nextjs", "tailwind", "react"],
         "url": "https://rextie-clone-app.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/rextie-clone-app",
-        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/rextie-clone.webp?t=2024-12-10T00%3A15%3A43.425Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/rextie-challenge.webp"
       },
       {
         "title": {
@@ -150,7 +150,7 @@
         "technologies": ["vite", "tailwind", "react"],
         "url": "https://challenge-fronted-kds.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/challenge-fronted-kds",
-        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/KDS-Challenge_compresed.webp?t=2024-12-11T01%3A54%3A16.211Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/kds-challenge.webp"
       },
       {
         "title": {
@@ -170,7 +170,7 @@
         ],
         "url": "https://react-task-challenge.vercel.app/",
         "git_url": "https://github.com/LuisSilvaB/react-task-challenge",
-        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/RavnTaskChallenge.webp?t=2024-12-11T02%3A16%3A06.209Z"
+        "img_url": "https://hhcidfjmfrddblmkxjji.supabase.co/storage/v1/object/public/Portfolio/Projects-photos/task-challenge.webp"
       }
     ]
   },

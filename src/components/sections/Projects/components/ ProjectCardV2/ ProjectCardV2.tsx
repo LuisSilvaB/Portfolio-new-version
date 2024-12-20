@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { getIconTechnology } from "../../utils/get-technologies";
 import { Button } from "@/components/ui/button";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { Separator } from "@/components/ui/separator";
 
 type ProjectsCardV2Props = {
   id: number;
@@ -52,7 +51,7 @@ const ProjectCardV2 = ({ id, project, lang } : ProjectsCardV2Props) => {
           ))}
         </div>
       </div>
-      <div className="relative flex-1 h-full">
+      <div className="relative flex-1 h-full py-8 pr-4">
         <motion.img
           initial={{ opacity: 0, filter: "blur(10px)" }}
           whileInView={{
@@ -63,7 +62,7 @@ const ProjectCardV2 = ({ id, project, lang } : ProjectsCardV2Props) => {
           transition={{ duration: 0.5 }}
           src={project.img_url}
           alt="Placeholder"
-          className="w-full h-full shadow-lg my-4 border dark:border-none object-cover rounded-xl transition-all ease-in-out duration-300"
+          className="w-full h-full shadow-xl  border dark:border-none object-cover rounded-md transition-all ease-in-out duration-300"
         />
       </div>
     </div>
