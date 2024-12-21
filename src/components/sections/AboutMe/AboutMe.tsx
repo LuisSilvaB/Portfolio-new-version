@@ -18,16 +18,17 @@ const MeInformation = ({ lang }: AboutMeProps) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="relative transition-all ease-in-out text-gray-800 w-full max-w-6xl h-full min-h-[500px] lg:min-h-[550px] flex flex-col items-start justify-center gap-6 p-4 lg:p-0 "
+      className="relative transition-all ease-in-out text-gray-800 w-full max-w-6xl h-full min-h-[500px] lg:min-h-[550px] flex flex-col items-start justify-center gap-3 ms:gap-6 p-4 lg:p-0 "
     >
-      <h1 className="text-2xl dark:text-white lg:text-5xl font-extrabold tracking-tight leading-tight">
+      <h1 className="text-4xl dark:text-white sm:text-5xl font-extrabold tracking-tight leading-tight">
         {dictionaryData.title[lang]}{" "}
         <span className="text-blue-500 dark:text-dark-primary-perzonalized">
           Luis Silva Balladares
         </span>
       </h1>
+
       <TypeAnimation
-        className="text-lg dark:text-white lg:text-2xl font-semibold tracking-tight leading-tight"
+        className="text-lg dark:text-white min-h-[50px] lg:text-2xl font-semibold tracking-tight leading-tight"
         sequence={[
           dictionaryData.descriptionTyping1[lang],
           1500,
@@ -40,10 +41,10 @@ const MeInformation = ({ lang }: AboutMeProps) => {
         repeat={Infinity}
         omitDeletionAnimation
       />
-      <p className="text-sm dark:text-white mt-4 leading-relaxed max-w-2xl">
+      <p className="text-sm dark:text-white mt-1 ms:mt-4 leading-relaxed max-w-2xl">
         {dictionaryData.description[lang]}
       </p>
-      <section className="flex flex-row gap-2">
+      <section className="flex flex-row gap-2 mt-2 sm:mt-0">
         <a  target='_blank' href={dictionaryContact.contactUrls[1].url}>
           <Button className='group flex flex-row gap-2'>
             <FaLinkedin className="transition-all ease-in-out text-white dark:text-blue-500" /> 
