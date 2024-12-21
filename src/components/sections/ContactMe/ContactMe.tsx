@@ -102,8 +102,8 @@ const ContactMe = ( { lang } : ContactMeProps) => {
       if(response.ok) {
         setLoadingSendMessage(false)
         toast({
-          title: "Mensaje enviado",
-          description: "Gracias por contactarme, te responderé lo antes posible",
+          title: dictionaryData.form.messageSend.success.toast.title[lang],
+          description: dictionaryData.form.messageSend.success.toast.description[lang],
           variant: "default",
         })
         formMethods.reset();
@@ -261,7 +261,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                       <FormDescription className="text-gray-800 dark:text-white">
                         {dictionaryData.form.from.helperText[lang]}
                       </FormDescription>
-                      <FormMessage className="text-gray-800 dark:text-red-300" />
+                      <FormMessage className="text-red-500 dark:text-red-300" />
                     </FormItem>
                   )}
                 />
@@ -286,7 +286,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                         <FormDescription className="text-gray-800 dark:text-white">
                           {dictionaryData.form.firstName.helperText[lang]}
                         </FormDescription>
-                        <FormMessage className="text-gray-800 dark:text-red-300" />
+                        <FormMessage className="text-red-500 dark:text-red-300" />
                       </FormItem>
                     )}
                   />
@@ -310,7 +310,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                         <FormDescription className="text-gray-800 dark:text-white">
                           {dictionaryData.form.lastName.helperText[lang]}
                         </FormDescription>
-                        <FormMessage className="text-gray-800 dark:text-red-300" />
+                        <FormMessage className="text-red-500 dark:text-red-300" />
                       </FormItem>
                     )}
                   />
@@ -335,7 +335,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                       <FormDescription className="text-gray-800 dark:text-white">
                         {dictionaryData.form.subject.helperText[lang]}
                       </FormDescription>
-                      <FormMessage className="text-gray-800 dark:text-red-300" />
+                      <FormMessage className="text-red-500 dark:text-red-300" />
                     </FormItem>
                   )}
                 />
@@ -360,20 +360,23 @@ const ContactMe = ( { lang } : ContactMeProps) => {
                       <FormDescription className="text-gray-800 dark:text-white">
                         {dictionaryData.form.message.helperText[lang]}
                       </FormDescription>
-                      <FormMessage className="text-gray-800 dark:text-red-300" />
+                      <FormMessage className="text-red-500 dark:text-red-300" />
                     </FormItem>
                   )}
                 />
                 <div className="w-full flex justify-end items-center flex-row gap-3">
                   {loadingSendMessage ? (
-                    <BiLoaderAlt className="animate-spin dark:text-dark-primary-perzonalized" />
+                    <BiLoaderAlt className="animate-spin text-gray-800 dark:text-dark-primary-perzonalized" />
                   ) : null}
                   {wasSending ? (
-                    <FaCheckCircle className="text-green-500" />
+                    <span className='flex flex-row gap-2 items-center text-xs'>
+                      <p>{dictionaryData.form.messageSend.success[lang]}</p>
+                      <FaCheckCircle className="text-green-500" />
+                    </span>
                   ) : null}
                   <Button
                     variant={"default"}
-                    className=" font-bold hover:border-gray-600  hover:border w-[40%] dark:bg-dark-primary-perzonalized text-white dark:hover:border-white dark:hover:bg-transparent"
+                    className=" font-bold hover:border-gray-600  hover:border w-[40%] dark:bg-dark-primary-perzonalized  dark:hover:border-white dark:hover:bg-orange-600 dark:text-white"
                   >
                     <p>{dictionaryData.submitButton[lang]}</p>
                     <IoIosArrowRoundForward />

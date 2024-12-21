@@ -301,7 +301,7 @@
           "en": "Must be a valid email address",
           "es": "Debe ser una dirección de correo válida"
         }
-      }, 
+      },
       "from": {
         "placeholder": {
           "en": "From",
@@ -328,50 +328,81 @@
         "errorMessages": {
           "en": "The first name must be at least 3 characters",
           "es": "El nombre debe tener al menos 3 caracteres"
-        }},
-        "lastName": {
-          "placeholder": {
-            "en": "Last Name",
-            "es": "Apellido"
-          },
-          "helperText": {
-            "en": "Write your last name",
-            "es": "Escriba su apellido"
-          },
-          "errorMessages": {
-            "en": "The last name must be at least 3 characters",
-            "es": "El apellido debe tener al menos 3 caracteres"
-          }
-        },
-        "subject": {
-          "placeholder": {
-            "en": "Subject",
-            "es": "Asunto"
-          },
-          "helperText": {
-            "en": "Write your subject",
-            "es": "Escriba su asunto"
-          }, 
-          "errorMessages": {
-            "en": "The subject must be at least 3 characters",
-            "es": "El asunto debe tener al menos 3 caracteres"
-          }
-        },
-        "message": {
-          "placeholder": {
-            "en": "Message",
-            "es": "Mensaje"
-          },
-          "helperText": {
-            "en": "Write your message",
-            "es": "Escriba su mensaje"
-          },
-          "errorMessages": {
-            "en": "The message must be at least 3 characters",
-            "es": "El mensaje debe tener al menos 3 caracteres"
-          }
         }
       },
+      "lastName": {
+        "placeholder": {
+          "en": "Last Name",
+          "es": "Apellido"
+        },
+        "helperText": {
+          "en": "Write your last name",
+          "es": "Escriba su apellido"
+        },
+        "errorMessages": {
+          "en": "The last name must be at least 3 characters",
+          "es": "El apellido debe tener al menos 3 caracteres"
+        }
+      },
+      "subject": {
+        "placeholder": {
+          "en": "Subject",
+          "es": "Asunto"
+        },
+        "helperText": {
+          "en": "Write your subject",
+          "es": "Escriba su asunto"
+        },
+        "errorMessages": {
+          "en": "The subject must be at least 3 characters",
+          "es": "El asunto debe tener al menos 3 caracteres"
+        }
+      },
+      "message": {
+        "placeholder": {
+          "en": "Message",
+          "es": "Mensaje"
+        },
+        "helperText": {
+          "en": "Write your message",
+          "es": "Escriba su mensaje"
+        },
+        "errorMessages": {
+          "en": "The message must be at least 3 characters",
+          "es": "El mensaje debe tener al menos 3 caracteres"
+        }
+      },
+      "messageSend": {
+        "success": {
+          "toast" :{
+            "title":{
+              "en": "Message sent",
+              "es": "Mensaje enviado"
+            },
+            "description":{
+              "en": "Thank you for contacting me",
+              "es": "Gracias por contactarme"
+            }
+          },
+          "en": "Message sent successfully",
+          "es": "Mensaje enviado correctamente"
+        },
+        "error": {
+          "toast" :{
+            "title":{
+              "en": "Error",
+              "es": "Error"
+            },
+            "description":{
+              "en": "Please, review the fields",
+              "es": "Por favor, revisa los campos"
+            }
+          },
+          "en": "Error sending message",
+          "es": "Error enviando mensaje"
+        }
+      }
+    },
       "naviagationTitle": {
         "en": "Navigation",
         "es": "Navegación"
