@@ -44,9 +44,13 @@ const Navbar = ({ lang }: NavbarProps) => {
       <div className="w-full flex justify-between items-center max-w-6xl">
         <section className="flex items-center gap-2">
           <NavbarMobileOptions lang={lang} />
-          <p className="text-2xl intersect:opacity-100 transition-opacity dark:text-dark-primary-perzonalized font-poppinsExtraBold">
+          <motion.p 
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2 }}
+          className="text-2xl intersect:opacity-100 transition-opacity dark:text-dark-primary-perzonalized font-poppinsExtraBold">
             lsilvaball.
-          </p>
+          </motion.p>
         </section>
         <NavbarDesktopOptions lang={lang} />
         <div className="flex items-center gap-2">
