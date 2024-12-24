@@ -6,6 +6,12 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import type { Lang } from '@/types/lang.type';
 import dictionary from '@/assets/dictionary/dictionary.json'; 
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { IoIosArrowRoundForward } from 'react-icons/io';
 
 type AboutMeProps = {
   lang: Lang;
@@ -73,7 +79,29 @@ const MeInformation = ({ lang }: AboutMeProps) => {
             <span>Github</span>
           </Button>
         </a>
-        <Button>Cv</Button>
+        <a target="_blank" href={dictionaryData.cv[lang].harvard.url}>
+          <Button>
+            Curriculum
+          </Button>
+        </a>
+        {/* <Popover>
+          <PopoverTrigger asChild>
+          </PopoverTrigger>
+          <PopoverContent side='right' className='w-fit flex flex-row gap-2'>
+            <a target="_blank" href={dictionaryData.cv[lang].harvard.url}>
+              <Button variant="link" className='dark:bg-dark-primary-perzonalized ring-blue-500 ring-1 dark:ring-0'>
+                <span>{dictionaryData.cv[lang].harvard.title}</span>
+                <IoIosArrowRoundForward className='-rotate-45'/>
+              </Button>
+            </a>
+            <a target="_blank" href={dictionaryData.cv[lang].classic.url}>
+              <Button variant="link" className='dark:bg-dark-primary-perzonalized ring-blue-500 ring-1 dark:ring-0'>  
+                <p>{dictionaryData.cv[lang].classic.title}</p>
+                <IoIosArrowRoundForward className='-rotate-45' />
+              </Button>
+            </a>
+          </PopoverContent>
+        </Popover> */}
       </section>
     </motion.div>
   );
