@@ -140,11 +140,12 @@ const ContactMe = ( { lang } : ContactMeProps) => {
       <div className="w-full flex flex-col-reverse md:flex-row gap-4 h-full  rounded-xl p-1 lg:p-4 text-white ">
         <div className=" flex flex-col items-start justify-start w-full gap-1">
           <div className="flex flex-col w-full items-start lg:justify-center lg:items-start mb-4">
-            <motion.h2
+          <motion.h2
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
+              transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
               className="uppercase text-4xl text-blue-500 dark:text-dark-primary-perzonalized lg:text-7xl font-poppinsExtraBold w-fit text-start"
             >
               {dictionaryData["title-fist-part"][lang]}
