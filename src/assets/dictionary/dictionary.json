@@ -50,16 +50,15 @@
       "en":{
         "harvard":{
           "title":"Harvard",
-          "url":"https://drive.google.com/file/d/1WDrxgThSTRFVmGIrkSsgj8ZP74TS-14z/view?usp=sharing"
+          "url":"https://drive.google.com/file/d/1FDTty575phrENKaEbYiR3qG9H48pZsgP/view?usp=sharing"
         }
 
       },
       "es":{
         "harvard":{
           "title":"Harvard",
-          "url":"https://drive.google.com/file/d/15um3MF4w4pn2fPEd9Q2BqKG_6jVy2x80/view?usp=sharing"
+          "url":"https://drive.google.com/file/d/19bshHDaFSi9V1eWVSRwfnx3omD-eelzW/view?usp=sharing"
         }
-
     }
   },
     "technologies": [
@@ -204,12 +203,51 @@
     "experiences": [
       {
         "title": {
+          "en": "Full Stack Developer - Domus ai",
+          "es": "Desarrollador Full Stack - Domus ai"
+        },
+        "date": {
+          "en": "02/2025 - present",
+          "es": "02/2025 - actualidad"
+        },
+        "description": {
+          "en": "I design and implement intelligent conversational agents that operate via WhatsApp, using IA SDK and Langchain to manage dynamic dialogues and connect with external tools. I integrate these agents with backend services to deliver relevant and up-to-date responses. The solution enables smooth and natural user interactions, easily adapting to different automation and support scenarios.",
+          "es": "Diseño e integro agentes conversacionales inteligentes que funcionan a través de WhatsApp, utilizando IA SDK y Langchain para gestionar conversaciones dinámicas y conectar con herramientas externas. Integro estos agentes con servicios backend para ofrecer respuestas actualizadas y relevantes. La solución permite una interacción fluida y natural con los usuarios, adaptándose fácilmente a distintos contextos de automatización y atención."
+        },
+        "techStack": {
+          "title": {
+            "en": "Tech Stack",
+            "es": "Tecnologías utilizadas"
+          },
+          "description": {
+            "en": "React, Styled-components, React Router DOM, React Query, React Hook Form, Yup, Joi, Node.js, Express, MySQL, Sequelize, Puppeteer, AWS (EC2, S3, WorkMail, Lightsail), Git, and automation and scraping tools.",
+            "es": "React, Styled-components, React Router DOM, React Query, React Hook Form, Yup, Joi, Node.js, Express, MySQL, Sequelize, Puppeteer, AWS (EC2, S3, WorkMail, Lightsail), Git, y herramientas de automatización y scraping."
+          },
+          "description-technologies":[
+            "react",
+            "next.js",
+            "ai SDK",
+            "langChain",
+            "langGraph",
+            "supabase",
+            "tailwind",
+            "zustand",
+            "zod",
+            "aws",
+            "git",
+            "automation",
+            "scraping"
+          ]
+        }
+      },
+      {
+        "title": {
           "en": "Full Stack Developer - Naz Tec",
           "es": "Desarrollador Full Stack - Naz Tec"
         },
         "date": {
-          "en": "04/2024 - present",
-          "es": "04/2024 - actualidad"
+          "en": "04/2024 - 01/2025",
+          "es": "04/2024 - 01/2025"
         },
         "description": {
           "en": "I designed and implemented user interfaces based on user requirements and guidelines, ensuring a high-quality visual and functional experience. I created and maintained backend services and microservices to support key functionalities, including a scraping service that keeps the information in the main application up to date.",
@@ -223,7 +261,25 @@
           "description": {
             "en": "React, Styled-components, React Router DOM, React Query, React Hook Form, Yup, Joi, Node.js, Express, MySQL, Sequelize, Puppeteer, AWS (EC2, S3, WorkMail, Lightsail), Git, and automation and scraping tools.",
             "es": "React, Styled-components, React Router DOM, React Query, React Hook Form, Yup, Joi, Node.js, Express, MySQL, Sequelize, Puppeteer, AWS (EC2, S3, WorkMail, Lightsail), Git, y herramientas de automatización y scraping."
-          }
+          },
+          "description-technologies":[
+            "react",
+            "styled-components",
+            "react-router-dom",
+            "react-query",
+            "react-hook-form",
+            "yup",
+            "joi",
+            "node.js",
+            "express",
+            "mysql",
+            "sequelize",
+            "puppeteer",
+            "aws",
+            "git",
+            "automation",
+            "scraping"
+          ]
         }
       },
       {
@@ -247,7 +303,14 @@
           "description": {
             "en": "React, Next.js, tailwind, React Query, React-flow.",
             "es": "React, Next.js, tailwind, React Query, React-flow."
-          }
+          },
+          "description-technologies":[
+            "react",
+            "next.js",
+            "tailwind",
+            "react-query",
+            "react-flow"
+          ]
         }
       },
       {
@@ -271,7 +334,12 @@
           "description": {
             "en": "WordPress, Html, Css.",
             "es": "WordPress, Html, Css."
-          }
+          }, 
+          "description-technologies":[
+            "wordpress",
+            "html",
+            "css"
+          ]
         }
       }
     ]
@@ -424,8 +492,8 @@
         "es": "Navegación"
       },
       "copyright": {
-        "en": "Copyright 2024. All rights reserved.",
-        "es": "Copyright 2024. Todos los derechos reservados."
+        "en": "Copyright 2025. All rights reserved.",
+        "es": "Copyright 2025. Todos los derechos reservados."
       },
       "submitButton": {
         "en": "Send",

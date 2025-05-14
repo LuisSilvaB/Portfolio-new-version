@@ -55,5 +55,7 @@ export type ExperienceType = {
       en: string;
       es: string;
     };
+    "description-technologies": string[];
   };
+
 };
