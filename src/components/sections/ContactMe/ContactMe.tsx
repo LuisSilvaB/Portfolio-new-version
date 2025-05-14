@@ -390,7 +390,7 @@ const ContactMe = ( { lang } : ContactMeProps) => {
       </div>
       <div className="w-full flex justify-between px-5 dark:text-white text-xs lg:text-lg">
         <p>{dictionaryData.copyright[lang]}</p>
-        <p>Trujillo 2024.</p>
+        <p>Trujillo 2025.</p>
       </div>
     </div>
   );
