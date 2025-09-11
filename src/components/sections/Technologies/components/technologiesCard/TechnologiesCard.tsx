@@ -23,7 +23,7 @@ const TechnologiesCard = ({id, icon, name }: TechnologiesCardProps) => {
       className={`basis-1/6 text-lg transition-all ease-in-out bg-[1px] border-dashed rounded-lg text-gray-500 dark:text-white border border-gray-700 dark:border-dark-primary-perzonalized flex justify-center items-center w-fit gap-4 py-3 ${isInView ? `opacity-100` : "opacity-0"}`}
     >
       {icon}
-      <p className="font-semibold">{name}</p>
+      <p className="font-semibold">{name[0].toUpperCase() + name.slice(1)}</p>
     </div>
   );
 }

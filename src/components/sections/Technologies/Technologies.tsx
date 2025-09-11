@@ -58,7 +58,7 @@ const Technologies = () => {
                 className="inline-flex items-center gap-4 py-3 px-6 text-2xl text-gray-600 dark:text-white"
               >
                 {getIconByName(icon as iconType)}
-                <p className="font-semibold whitespace-nowrap">{icon}</p>
+                <p className="font-semibold whitespace-nowrap">{icon[0].toUpperCase() + icon.slice(1)}</p>
               </div>
             ))}
           </div>

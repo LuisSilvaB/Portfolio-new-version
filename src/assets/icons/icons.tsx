@@ -14,7 +14,7 @@ import {
   SiExpress,
   SiAmazons3,
   SiGraphql, 
-  SiApollographql, 
+  SiApollographql,
 } from "react-icons/si";
 import { CiLinkedin } from "react-icons/ci";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
@@ -23,6 +23,8 @@ import { TbBrandOauth } from "react-icons/tb";
 import { BiWorld } from "react-icons/bi";
 import { PiTelegramLogoLight } from "react-icons/pi";
 import { BiLogoGmail } from "react-icons/bi";
+import { GiParrotHead } from "react-icons/gi";
+import { DiRedis } from "react-icons/di";
 
 export const iconNodes = {
   "next.js": <SiNextdotjs />,
@@ -56,4 +58,6 @@ export const iconNodes = {
   whatsapp: <FaWhatsapp />,
   telegram: <PiTelegramLogoLight />,
   gmail: <BiLogoGmail />,
+  redis: <DiRedis />,
+  langGraph: <GiParrotHead />
 };
