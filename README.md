@@ -1,48 +1,110 @@
-# Astro Starter Kit: Basics
+# Portafolio Personal - Luis Silva
 
-```sh
-npm create astro@latest -- --template basics
+Este es mi portafolio personal, un sitio web desarrollado con Astro, TypeScript y Tailwind CSS para mostrar mis proyectos, experiencia laboral, educación y formas de contacto.
+
+## 🚀 Características
+
+- **Sección Sobre Mí**: Información personal y profesional.
+- **Proyectos**: Muestra de mis proyectos destacados con descripciones y tecnologías utilizadas.
+- **Experiencia Laboral**: Cronograma de mi trayectoria profesional.
+- **Tecnologías**: Lista de tecnologías que domino.
+- **Educación**: Información sobre mi formación académica.
+- **Contacto**: Formulario para enviar mensajes directamente desde el sitio.
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Astro**: Framework para construir el sitio web.
+- **TypeScript**: Para tipado estático y mejor desarrollo.
+- **Tailwind CSS**: Para estilos y diseño responsivo.
+- **React**: Componentes interactivos (integrado con Astro).
+- **Framer Motion**: Para animaciones.
+- **React Hook Form**: Para manejo de formularios.
+- **Zod**: Para validación de esquemas.
+- **Shadcn/ui**: Componentes de UI reutilizables.
+
+## 📦 Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/tu-portafolio.git
+   cd tu-portafolio
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Ejecuta el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+   El sitio estará disponible en `http://localhost:4321`.
+
+## 🏗️ Construcción y Despliegue
+
+Para construir el sitio para producción:
+
+```bash
+npm run build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Para previsualizar la construcción:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```bash
+npm run preview
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estructura del Proyecto
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.ico
+│   ├── fonts/
+│   └── img/
 ├── src/
+│   ├── assets/
+│   │   ├── dictionary/
+│   │   └── icons/
+│   ├── components/
+│   │   ├── sections/
+│   │   │   ├── AboutMe/
+│   │   │   ├── ContactMe/
+│   │   │   ├── Education/
+│   │   │   ├── Projects/
+│   │   │   ├── Technologies/
+│   │   │   └── WorkExperience/
+│   │   └── ui/
+│   ├── hooks/
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── lib/
+│   ├── pages/
+│   ├── styles/
+│   ├── types/
+│   └── utils/
+├── astro.config.mjs
+├── tailwind.config.mjs
+├── tsconfig.json
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🌐 Internacionalización
 
-## 🧞 Commands
+El sitio soporta múltiples idiomas (español e inglés) utilizando un diccionario JSON para las traducciones.
 
-All commands are run from the root of the project, from a terminal:
+## 📧 Contacto
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Si deseas contactarme, puedes usar el formulario en la sección de Contacto o enviarme un email a `luisarmandoballadares@gmail.com`.
 
-## 👀 Want to learn more?
+## 📄 Licencia
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+---
+
+Desarrollado con ❤️ por Luis Silva.
