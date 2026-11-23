@@ -58,6 +58,7 @@ const ticker = [...px.ticker, ...px.ticker];
                   <h2 class="display card-name"><span class="hl">{c.name}</span></h2>
                   <p class="cond card-headline">{c.headline}</p>
                   <p class="card-desc">{c.desc}</p>
+                  {c.stack && <p class="card-stack">{c.stack}</p>}
                 </div>
                 <div class="stats">
                   {c.stats.map((s) => (
@@ -73,10 +74,26 @@ const ticker = [...px.ticker, ...px.ticker];
                   <img class="photo" src={c.img} alt={c.alt} loading={i === 0 ? 'eager' : 'lazy'} />
                 ) : (
                   c.chat && (
-                    <div class="photo chat" role="img" aria-label={c.alt}>
-                      <span class="b-in">{c.chat.in}</span>
-                      <span class="b-out">{c.chat.out}</span>
-                      <span class="b-actions"><span>{c.chat.yes}</span><span>{c.chat.no}</span></span>
+                    <div class="photo wa" role="img" aria-label={c.alt}>
+                      <div class="wa-top">
+                        <span class="wa-avatar">D</span>
+                        <span class="col"><strong>{c.chat.name}</strong><small>{c.chat.status}</small></span>
+                      </div>
+                      <div class="wa-body">
+                        <div class="wa-me s1">
+                          <span class="receipt"><b>{c.chat.receipt}</b><i></i><i></i><i style="width:60%"></i><em>S/ ••••</em></span>
+                          {c.chat.in}<span class="tick">✓✓</span>
+                        </div>
+                        <div class="slot">
+                          <span class="wa-bot typing t1"><i></i><i></i><i></i></span>
+                          <span class="wa-bot s2">{c.chat.out}</span>
+                        </div>
+                        <div class="wa-actions s3"><span class="yes">{c.chat.yes}</span><span>{c.chat.no}</span></div>
+                        <div class="slot">
+                          <span class="wa-bot typing t2"><i></i><i></i><i></i></span>
+                          <span class="wa-bot ok s4">{c.chat.ok}</span>
+                        </div>
+                      </div>
                     </div>
                   )
                 )}
@@ -158,11 +175,38 @@ const ticker = [...px.ticker, ...px.ticker];
   .stat-l { font-size: 11px; opacity: 0.8; }
   .shot-frame { position: relative; border: 2px solid currentColor; overflow: hidden; min-height: 440px; background: #fff; }
   .shot-frame img { display: block; width: 100%; height: 100%; min-height: 440px; object-fit: cover; object-position: top; }
-  .chat { position: absolute; inset: 0; background: #e7f5ee; display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 40px; color: #0a0a0a; font-family: system-ui, sans-serif; font-size: 18px; }
-  .b-in { align-self: flex-start; padding: 14px 18px; border-radius: 16px 16px 16px 4px; background: #fff; }
-  .b-out { align-self: flex-end; padding: 14px 18px; border-radius: 16px 16px 4px 16px; background: #0f7a55; color: #fff; }
-  .b-actions { align-self: flex-end; display: flex; gap: 8px; }
-  .b-actions span { padding: 10px 16px; border: 2px solid #0f7a55; border-radius: 999px; color: #0f7a55; }
+  /* Domus: chat estilo WhatsApp que se reproduce solo (ciclo de 10 s) */
+  .wa { position: absolute; inset: 0; display: flex; flex-direction: column; background: #efe7dd; color: #0a0a0a; font-family: system-ui, sans-serif; font-size: 16px; line-height: 1.35; }
+  .wa-top { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #0f5e47; color: #fff; }
+  .wa-top small { opacity: 0.8; font-size: 12px; }
+  .wa-avatar { width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #0f5e47; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+  .wa-body { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; padding: 18px; }
+  .wa-me, .wa-bot { max-width: 78%; padding: 9px 12px; border-radius: 10px; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12); }
+  .wa-me { align-self: flex-end; background: #d9fdd3; display: flex; flex-direction: column; gap: 6px; }
+  .wa-bot { align-self: flex-start; background: #fff; }
+  .tick { align-self: flex-end; font-size: 11px; color: #34b7f1; }
+  .receipt { display: flex; flex-direction: column; gap: 4px; width: 150px; padding: 10px; background: #fff; border: 1px dashed #9aa79f; font-size: 11px; }
+  .receipt i { display: block; height: 5px; width: 100%; background: #d6dcd8; }
+  .receipt em { font-style: normal; font-weight: 700; }
+  .slot { position: relative; display: flex; flex-direction: column; min-height: 42px; }
+  .slot .typing { position: absolute; left: 0; bottom: 0; display: flex; gap: 4px; padding: 13px 14px; }
+  .typing i { width: 7px; height: 7px; border-radius: 50%; background: #8a958f; animation: bounce 1s infinite; }
+  .typing i:nth-child(2) { animation-delay: 0.15s; } .typing i:nth-child(3) { animation-delay: 0.3s; }
+  .wa-actions { align-self: flex-start; display: flex; gap: 8px; }
+  .wa-actions span { padding: 8px 14px; border-radius: 999px; background: #fff; color: #0f5e47; font-weight: 600; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12); }
+  .wa-actions .yes { animation: tap 10s infinite; }
+  .ok { font-weight: 600; color: #0f5e47; }
+  .s1 { animation: s1 10s infinite; } .s2 { animation: s2 10s infinite; } .s3 { animation: s3 10s infinite; } .s4 { animation: s4 10s infinite; }
+  .t1 { animation: t1 10s infinite; } .t2 { animation: t2 10s infinite; }
+  @keyframes s1 { 0%, 3% { opacity: 0; transform: translateY(8px); } 6%, 92% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; } }
+  @keyframes t1 { 0%, 10% { opacity: 0; } 12%, 21% { opacity: 1; } 22%, 100% { opacity: 0; } }
+  @keyframes s2 { 0%, 22% { opacity: 0; transform: translateY(8px); } 25%, 92% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; } }
+  @keyframes s3 { 0%, 29% { opacity: 0; transform: translateY(8px); } 32%, 92% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; } }
+  @keyframes tap { 0%, 41% { background: #fff; color: #0f5e47; } 43%, 92% { background: #0f5e47; color: #fff; } 100% { background: #fff; color: #0f5e47; } }
+  @keyframes t2 { 0%, 45% { opacity: 0; } 47%, 56% { opacity: 1; } 57%, 100% { opacity: 0; } }
+  @keyframes s4 { 0%, 57% { opacity: 0; transform: translateY(8px); } 60%, 92% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; } }
+  @keyframes bounce { 0%, 80%, 100% { transform: translateY(0); opacity: 0.4; } 40% { transform: translateY(-4px); opacity: 1; } }
+  .card-stack { font-size: 12px; opacity: 0.85; }
   .see { position: absolute; right: 12px; bottom: 12px; padding: 6px 10px; background: #0a0a0a; color: #ecebe6; }
   .extra { padding-top: 96px; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 32px; }
   .jobs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); border-top: 2px solid var(--ink); }
@@ -181,7 +225,9 @@ const ticker = [...px.ticker, ...px.ticker];
   }
   @keyframes ticker { to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) {
-    .ticker, .mask > .outline { animation: none; }
+    .ticker, .mask > .outline, .s1, .s2, .s3, .s4, .wa-actions .yes, .typing i { animation: none; }
+    .t1, .t2 { display: none; }
+    .wa-actions .yes { background: #0f5e47; color: #fff; }
     .hl { transition: none; }
   }
   @media (max-width: 860px) {
@@ -192,6 +238,8 @@ const ticker = [...px.ticker, ...px.ticker];
     .shot-frame, .shot-frame img { min-height: 260px; }
     .outline { -webkit-text-stroke-width: 2px; }
     .stat-n { font-size: 20px; }
-    .chat { padding: 20px 20px 56px; font-size: 15px; }
+    .wa { font-size: 14px; }
+    .wa-body { padding: 12px 12px 52px; gap: 8px; }
+    .receipt { width: 120px; }
   }
 </style>
