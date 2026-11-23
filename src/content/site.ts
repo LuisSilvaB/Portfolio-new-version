@@ -537,3 +537,65 @@ const casesEn: Case[] = [
 ];
 
 export const cases = { es: casesEs, en: casesEn };
+
+type PosterCard = {
+  n: string;
+  name: string;
+  tag: string;
+  dates: string;
+  headline: string;
+  desc: string;
+  stats: Stat[];
+  img?: string;
+  alt: string;
+  href: string;
+  chat?: { in: string; out: string; yes: string; no: string };
+};
+
+const posterEs = {
+  edition: 'Edición 2026 · Ingeniero de Computación y Sistemas',
+  live: 'Trujillo, PE · en línea',
+  lead: ['Construyo el software que ', 'cada negocio', ' necesita para operar — y ahora con IA.'],
+  ctaWork: 'Ver obra ↓',
+  breaking: 'Última hora',
+  ticker: ['Harmony supera los 20 mil pedidos', 'SIOA gestiona 14 concesiones', 'Asistente de WhatsApp en varios países', 'Ingeniero titulado en 2026'],
+  seeCase: 'Ver caso →',
+  seeDemo: 'Ver demo ↗',
+  classifiedsTitle: 'Clasificados',
+  classifieds: 'SE OFRECE ingeniero full stack. Next.js, React 19, Bun, Elysia, PostgreSQL, Prisma, Supabase, LangGraph, OpenAI. Trujillo o remoto.',
+  available: 'Disponible para conversar',
+  talk: ['Hable', 'mos.'],
+  work: 'Obra',
+  talkNav: 'Hablemos',
+  cards: [
+    { n: '01', name: 'Harmony', tag: 'Producto propio', dates: '2024 — hoy', headline: 'Más de 20 mil pedidos procesados', desc: 'POS multi-sucursal con pedidos QR desde la mesa. El pedido llega al punto de venta en tiempo real.', stats: [{ n: '+20 mil', l: 'pedidos' }, { n: '20', l: 'sucursales' }, { n: '~1 000', l: 'pedidos/mes' }], img: '/img/projects/harmony-terminal.png', alt: 'Terminal de venta de Harmony con la orden de una mesa', href: '/es/harmony' },
+    { n: '02', name: 'SIOA', tag: 'Cliente · único dev', dates: '2026 — hoy', headline: 'El cultivo del mar, en un solo sistema', desc: 'Gestión productiva para una empresa acuícola: trabajo de campo, condiciones del mar y alertas al equipo.', stats: [{ n: '14', l: 'concesiones' }, { n: '+130', l: 'líneas' }, { n: '+2 mil', l: 'registros' }], img: '/img/projects/sioa-modules.png', alt: 'Módulos de SIOA', href: '/es/sioa' },
+    { n: '03', name: 'Domus AI', tag: 'Empleo · IA', dates: '2025 — hoy', headline: 'Pagar la cuota con una foto por WhatsApp', desc: 'Asistente de WhatsApp para residentes: pagos con foto del comprobante, reservas e incidencias.', stats: [{ n: 'E2E', l: 'IA a web' }, { n: '+2 mil', l: 'commits' }, { n: '4', l: 'repos' }], alt: 'Conversación de ejemplo con el asistente', href: '/es/domus', chat: { in: 'Ya pagué la cuota', out: 'Recibí tu comprobante. ¿Lo registro a tu nombre?', yes: 'Sí, registrar', no: 'No' } },
+    { n: '04', name: 'Voice Quiz', tag: 'Proyecto personal', dates: '2024 — 2025', headline: 'Cuestionarios con IA que se responden hablando', desc: 'Los docentes generan preguntas con IA y los alumnos responden con la voz.', stats: [{ n: 'IA', l: 'genera' }, { n: 'Voz', l: 'responde' }, { n: 'Flask', l: 'backend' }], img: '/img/projects/voice-quiz.png', alt: 'Portada de Voice Quiz', href: 'https://voice-quiz-app.vercel.app/' },
+  ] as PosterCard[],
+};
+
+const posterEn: typeof posterEs = {
+  edition: 'Edition 2026 · Computer & Systems Engineer',
+  live: 'Trujillo, PE · online',
+  lead: ['I build the software ', 'each business', ' needs to run — now with AI.'],
+  ctaWork: 'See work ↓',
+  breaking: 'Breaking',
+  ticker: ['Harmony passes 20k orders', 'SIOA manages 14 concessions', 'WhatsApp assistant in several countries', 'Engineering degree earned in 2026'],
+  seeCase: 'Read case →',
+  seeDemo: 'Live demo ↗',
+  classifiedsTitle: 'Classifieds',
+  classifieds: 'AVAILABLE: full-stack engineer. Next.js, React 19, Bun, Elysia, PostgreSQL, Prisma, Supabase, LangGraph, OpenAI. Trujillo or remote.',
+  available: 'Open to talk',
+  talk: ["Let's", 'talk.'],
+  work: 'Work',
+  talkNav: "Let's talk",
+  cards: [
+    { ...posterEs.cards[0], tag: 'Own product', dates: '2024 — now', headline: '20k+ orders processed', desc: 'Multi-branch POS with QR ordering from the table. Orders reach the point of sale in real time.', stats: [{ n: '20k+', l: 'orders' }, { n: '20', l: 'branches' }, { n: '~1,000', l: 'orders/month' }], alt: 'Harmony sales terminal with a table order', href: '/en/harmony' },
+    { ...posterEs.cards[1], tag: 'Client · sole dev', dates: '2026 — now', headline: 'A sea farm, in a single system', desc: 'Production management for an aquaculture company: field work, sea conditions and team alerts.', stats: [{ n: '14', l: 'concessions' }, { n: '130+', l: 'lines' }, { n: '2k+', l: 'readings' }], alt: 'SIOA modules (interface in Spanish)', href: '/en/sioa' },
+    { ...posterEs.cards[2], tag: 'Employment · AI', dates: '2025 — now', headline: 'Pay the monthly fee with a photo on WhatsApp', desc: 'WhatsApp assistant for residents: pay with a photo of the receipt, book common areas and report issues.', stats: [{ n: 'E2E', l: 'AI to web' }, { n: '2k+', l: 'commits' }, { n: '4', l: 'repos' }], alt: 'Sample conversation with the assistant', href: '/en/domus', chat: { in: 'I paid the fee', out: 'Got your receipt. Shall I record it under your name?', yes: 'Yes, record it', no: 'No' } },
+    { ...posterEs.cards[3], tag: 'Side project', dates: '2024 — 2025', headline: 'AI quizzes you answer out loud', desc: 'Teachers generate questions with AI and students answer by voice.', stats: [{ n: 'AI', l: 'generates' }, { n: 'Voice', l: 'answers' }, { n: 'Flask', l: 'backend' }], alt: 'Voice Quiz home page (in Spanish)' },
+  ],
+};
+
+export const poster = { es: posterEs, en: posterEn };

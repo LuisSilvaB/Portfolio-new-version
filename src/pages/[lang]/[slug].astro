@@ -10,30 +10,29 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const tx = t[lang];
 const c = cases[lang].find((x) => x.slug === Astro.params.slug)!;
-const accent = c.accent === 'coral' ? 'var(--coral)' : 'var(--sea)';
 // ponytail: Harmony leads with its numbers; the kicker numbering already says so
 const statsFirst = c.stats.kicker.startsWith('01');
-const nextTitle = cases[lang].find((x) => x.slug === c.next.slug)!;
+const order = statsFirst ? ['stats', 'features'] : ['features', 'stats'];
 ---
 
 <Site lang={lang} title={`${c.title} · Luis Silva`} description={c.lead ?? c.title} path={`/${c.slug}`}>
-  <main style={`--accent:${accent}`}>
-    <section class="wrap col gap24" style="padding-top: 88px; padding-bottom: 48px">
-      <p class="eyebrow accent">{c.kicker}</p>
-      <h1 class="case-title">{c.title}</h1>
-      {c.lead && <p class="muted" style="max-width: 680px">{c.lead}</p>}
-      <div class="grid-auto" style="--min: 200px; padding-top: 24px; border-top: 1px solid var(--line)">
-        {c.meta.map((m) => <div><div class="mono small muted" style="text-transform: uppercase">{m.k}</div><div>{m.v}</div></div>)}
+  <main>
+    <section class="pad intro">
+      <span class="caps" style="color: var(--redInk)">{c.kicker}</span>
+      <h1 class="display case-title">{c.title}</h1>
+      {c.lead && <p class="lead">{c.lead}</p>}
+      <div class="meta">
+        {c.meta.map((m) => <div><div class="caps muted">{m.k}</div><div>{m.v}</div></div>)}
       </div>
     </section>
 
     {
       c.images.length > 0 && (
-        <section class="wrap col gap24">
+        <section class="pad shots">
           {c.images.map((img) => (
-            <figure class="col gap8" style="margin: 0">
-              <img class="shot" src={img.src} alt={img.alt} loading="lazy" />
-              <figcaption class="mono small muted">{img.caption}</figcaption>
+            <figure class="hover-color">
+              <div class="frame"><img class="photo" src={img.src} alt={img.alt} loading="lazy" /></div>
+              <figcaption class="caps muted">{img.caption}</figcaption>
             </figure>
           ))}
         </section>
@@ -42,57 +41,51 @@ const nextTitle = cases[lang].find((x) => x.slug === c.next.slug)!;
 
     {
       c.problem && (
-        <section class="wrap split" style="padding-top: 88px">
-          <div class="col gap8" style="flex: 1 1 280px">
-            <span class="kicker accent">{c.problem.kicker}</span>
-            <h2 class="h2s">{c.problem.h}</h2>
+        <section class="pad split">
+          <div class="head">
+            <span class="caps" style="color: var(--redInk)">{c.problem.kicker}</span>
+            <h2 class="cond h2">{c.problem.h}</h2>
           </div>
-          <p style="flex: 2 1 520px">{c.problem.p}</p>
+          <p class="body">{c.problem.p}</p>
         </section>
       )
     }
 
     {
-      [statsFirst ? 'stats' : 'features', statsFirst ? 'features' : 'stats'].map((block) =>
+      order.map((block) =>
         block === 'features' ? (
           <>
-            <section class="wrap col gap28" style="padding-top: 72px">
-              <div class="col gap8">
-                <span class="kicker accent">{c.features.kicker}</span>
-                <h2 class="h2s">{c.features.h}</h2>
-              </div>
-              <div class="grid-auto" style="--min: 260px; gap: 16px">
+            <section class="pad block">
+              <span class="caps" style="color: var(--redInk)">{c.features.kicker}</span>
+              <h2 class="cond h2">{c.features.h}</h2>
+              <div class="tiles">
                 {c.features.items.map((f) => (
                   <div class="tile">
-                    <strong style="font-size: 20px">{f.t}</strong>
-                    <span class="muted">{f.d}</span>
+                    <strong class="display" style="font-size: 20px">{f.t}</strong>
+                    <span>{f.d}</span>
                   </div>
                 ))}
               </div>
             </section>
             {c.list && (
-              <section class="wrap split" style="padding-top: 72px">
-                <div class="col gap8" style="flex: 1 1 280px">
-                  <span class="kicker accent">{c.list.kicker}</span>
-                  <h2 class="h2s">{c.list.h}</h2>
+              <section class="pad split">
+                <div class="head">
+                  <span class="caps" style="color: var(--redInk)">{c.list.kicker}</span>
+                  <h2 class="cond h2">{c.list.h}</h2>
                 </div>
-                <ul class="lines" style="flex: 2 1 520px">
-                  {c.list.items.map((i) => <li>{i}</li>)}
-                </ul>
+                <ul class="lines body">{c.list.items.map((i) => <li>{i}</li>)}</ul>
               </section>
             )}
           </>
         ) : (
-          <section class="wrap col gap28" style="padding-top: 72px">
-            <div class="col gap8">
-              <span class="kicker accent">{c.stats.kicker}</span>
-              <h2 class="h2s">{c.stats.h}</h2>
-            </div>
-            <div class="grid-auto big" style="border-top: 2px solid var(--ink); padding-top: 24px">
+          <section class="pad block">
+            <span class="caps" style="color: var(--redInk)">{c.stats.kicker}</span>
+            <h2 class="cond h2">{c.stats.h}</h2>
+            <div class="stats">
               {c.stats.items.map((s) => (
-                <div>
-                  <div class="stat-n">{s.n}</div>
-                  <div class="stat-l">{s.l}</div>
+                <div class="stat">
+                  <div class="display stat-n">{s.n}</div>
+                  <div class="caps">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -101,48 +94,64 @@ const nextTitle = cases[lang].find((x) => x.slug === c.next.slug)!;
       )
     }
 
-    <section class="wrap" style="padding-top: 72px; padding-bottom: 96px">
+    <section class="pad block" style="padding-bottom: 96px">
       <div class="contrib">
-        <div class="col gap12" style="flex: 1 1 200px">
-          <span class="kicker accent" style="text-transform: uppercase">{c.contribution.kicker}</span>
-          {c.contribution.stat && <div class="mono" style="font-size: 36px">{c.contribution.stat.n}</div>}
-          {c.contribution.stat && <span class="muted" style="font-size: 15px">{c.contribution.stat.l}</span>}
+        <div class="contrib-head">
+          <span class="caps">{c.contribution.kicker}</span>
+          {c.contribution.stat && <div class="display" style="font-size: 48px; line-height: 1">{c.contribution.stat.n}</div>}
+          {c.contribution.stat && <span class="caps">{c.contribution.stat.l}</span>}
         </div>
         {
           c.contribution.items.some((i) => i.t) ? (
-            <div class="grid-auto" style="flex: 3 1 520px; --min: 260px; gap: 16px">
+            <div class="tiles" style="flex: 3 1 520px">
               {c.contribution.items.map((i) => (
-                <div class="tile" style="background: var(--bg)">
-                  <strong>{i.t}</strong>
-                  <span class="muted" style="font-size: 15px">{i.d}</span>
+                <div class="tile" style="background: var(--paper); color: var(--ink)">
+                  <strong class="display" style="font-size: 18px">{i.t}</strong>
+                  <span style="font-size: 14px">{i.d}</span>
                 </div>
               ))}
             </div>
           ) : (
-            <ul class="col gap12" style="flex: 3 1 520px; margin: 0; padding-left: 20px">
-              {c.contribution.items.map((i) => <li>{i.d}</li>)}
-            </ul>
+            <ul class="lines" style="flex: 3 1 520px; border-color: #0a0a0a">{c.contribution.items.map((i) => <li>{i.d}</li>)}</ul>
           )
         }
       </div>
     </section>
 
-    <footer style="background: var(--ink); color: var(--bg)">
-      <div class="wrap row between center wrap-gap" style="padding-top: 48px; padding-bottom: 48px">
-        <span style="font-family: 'Instrument Serif', serif; font-size: 32px">{tx.nextCase}: {c.next.label}</span>
-        <a href={`/${lang}/${nextTitle.slug}`} class="btn" style="background: var(--bg); color: var(--ink)">{c.next.label} →</a>
-      </div>
-    </footer>
+    <a href={`/${lang}/${c.next.slug}`} class="next pad">
+      <span class="caps">{tx.nextCase}</span>
+      <span class="display next-name">{c.next.label} →</span>
+    </a>
   </main>
 </Site>
 
 <style>
-  .accent { color: var(--accent); }
-  .case-title { max-width: 980px; font-size: clamp(42px, 6vw, 80px); line-height: 1.04; }
-  .split { display: flex; flex-wrap: wrap; gap: 32px 64px; }
-  .lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
-  .lines li { padding: 16px 0; border-top: 1px solid var(--line); }
-  .lines li:last-child { border-bottom: 1px solid var(--line); }
-  .contrib { display: flex; flex-wrap: wrap; gap: 24px 64px; padding: 28px; border-radius: 20px; border: 1px solid var(--line); background: var(--surface); }
-  .big .stat-n { font-size: 44px; }
+  .intro { padding-top: 64px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 20px; }
+  .case-title { font-size: clamp(40px, 6vw, 88px); line-height: 0.92; max-width: 1100px; }
+  .lead { max-width: 680px; font-size: 17px; }
+  .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; padding-top: 20px; border-top: 2px solid var(--ink); }
+  .shots { display: flex; flex-direction: column; gap: 24px; }
+  .shots figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .frame { border: 2px solid var(--ink); overflow: hidden; background: #fff; }
+  .frame img { display: block; width: 100%; height: auto; }
+  .split { padding-top: 72px; display: flex; flex-wrap: wrap; gap: 24px 64px; }
+  .head { flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px; }
+  .body { flex: 2 1 520px; font-size: 16px; }
+  .h2 { font-size: clamp(40px, 5vw, 64px); line-height: 0.92; }
+  .block { padding-top: 72px; display: flex; flex-direction: column; gap: 20px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0; border-top: 2px solid var(--ink); border-left: 2px solid var(--ink); }
+  .tile { padding: 22px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); display: flex; flex-direction: column; gap: 8px; transition: background 0.25s, color 0.25s; }
+  .tile:hover { background: var(--red); color: #0a0a0a; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); border-top: 2px solid var(--ink); }
+  .stat { padding: 20px 16px 20px 0; display: flex; flex-direction: column; gap: 6px; }
+  .stat-n { font-size: clamp(40px, 5vw, 64px); line-height: 0.95; }
+  .lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 2px solid var(--ink); }
+  .lines li { padding: 14px 0; border-bottom: 2px solid var(--ink); }
+  .contrib { display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 28px; border: 2px solid var(--ink); background: var(--red); color: #0a0a0a; }
+  .contrib .lines, .contrib .lines li { border-color: #0a0a0a; }
+  .contrib-head { flex: 1 1 200px; display: flex; flex-direction: column; gap: 10px; }
+  .next { display: flex; flex-direction: column; gap: 8px; padding-top: 40px; padding-bottom: 48px; background: #0a0a0a; color: #ecebe6; text-decoration: none; border-top: 2px solid var(--ink); }
+  .next:hover { color: #ff5a3d; }
+  .next-name { font-size: clamp(48px, 9vw, 140px); line-height: 0.9; }
+  @media (prefers-reduced-motion: reduce) { .tile { transition: none; } }
 </style>
