@@ -1,0 +1,148 @@
+---
+import Site from '@/layouts/Site.astro';
+import { t, cases, langs, type Lang } from '@/content/site';
+
+export const prerender = true;
+export function getStaticPaths() {
+  return langs.flatMap((lang) => cases[lang].map((c) => ({ params: { lang, slug: c.slug } })));
+}
+
+const lang = Astro.params.lang as Lang;
+const tx = t[lang];
+const c = cases[lang].find((x) => x.slug === Astro.params.slug)!;
+const accent = c.accent === 'coral' ? 'var(--coral)' : 'var(--sea)';
+// ponytail: Harmony leads with its numbers; the kicker numbering already says so
+const statsFirst = c.stats.kicker.startsWith('01');
+const nextTitle = cases[lang].find((x) => x.slug === c.next.slug)!;
+---
+
+<Site lang={lang} title={`${c.title} · Luis Silva`} description={c.lead ?? c.title} path={`/${c.slug}`}>
+  <main style={`--accent:${accent}`}>
+    <section class="wrap col gap24" style="padding-top: 88px; padding-bottom: 48px">
+      <p class="eyebrow accent">{c.kicker}</p>
+      <h1 class="case-title">{c.title}</h1>
+      {c.lead && <p class="muted" style="max-width: 680px">{c.lead}</p>}
+      <div class="grid-auto" style="--min: 200px; padding-top: 24px; border-top: 1px solid var(--line)">
+        {c.meta.map((m) => <div><div class="mono small muted" style="text-transform: uppercase">{m.k}</div><div>{m.v}</div></div>)}
+      </div>
+    </section>
+
+    {
+      c.images.length > 0 && (
+        <section class="wrap col gap24">
+          {c.images.map((img) => (
+            <figure class="col gap8" style="margin: 0">
+              <img class="shot" src={img.src} alt={img.alt} loading="lazy" />
+              <figcaption class="mono small muted">{img.caption}</figcaption>
+            </figure>
+          ))}
+        </section>
+      )
+    }
+
+    {
+      c.problem && (
+        <section class="wrap split" style="padding-top: 88px">
+          <div class="col gap8" style="flex: 1 1 280px">
+            <span class="kicker accent">{c.problem.kicker}</span>
+            <h2 class="h2s">{c.problem.h}</h2>
+          </div>
+          <p style="flex: 2 1 520px">{c.problem.p}</p>
+        </section>
+      )
+    }
+
+    {
+      [statsFirst ? 'stats' : 'features', statsFirst ? 'features' : 'stats'].map((block) =>
+        block === 'features' ? (
+          <>
+            <section class="wrap col gap28" style="padding-top: 72px">
+              <div class="col gap8">
+                <span class="kicker accent">{c.features.kicker}</span>
+                <h2 class="h2s">{c.features.h}</h2>
+              </div>
+              <div class="grid-auto" style="--min: 260px; gap: 16px">
+                {c.features.items.map((f) => (
+                  <div class="tile">
+                    <strong style="font-size: 20px">{f.t}</strong>
+                    <span class="muted">{f.d}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+            {c.list && (
+              <section class="wrap split" style="padding-top: 72px">
+                <div class="col gap8" style="flex: 1 1 280px">
+                  <span class="kicker accent">{c.list.kicker}</span>
+                  <h2 class="h2s">{c.list.h}</h2>
+                </div>
+                <ul class="lines" style="flex: 2 1 520px">
+                  {c.list.items.map((i) => <li>{i}</li>)}
+                </ul>
+              </section>
+            )}
+          </>
+        ) : (
+          <section class="wrap col gap28" style="padding-top: 72px">
+            <div class="col gap8">
+              <span class="kicker accent">{c.stats.kicker}</span>
+              <h2 class="h2s">{c.stats.h}</h2>
+            </div>
+            <div class="grid-auto big" style="border-top: 2px solid var(--ink); padding-top: 24px">
+              {c.stats.items.map((s) => (
+                <div>
+                  <div class="stat-n">{s.n}</div>
+                  <div class="stat-l">{s.l}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )
+      )
+    }
+
+    <section class="wrap" style="padding-top: 72px; padding-bottom: 96px">
+      <div class="contrib">
+        <div class="col gap12" style="flex: 1 1 200px">
+          <span class="kicker accent" style="text-transform: uppercase">{c.contribution.kicker}</span>
+          {c.contribution.stat && <div class="mono" style="font-size: 36px">{c.contribution.stat.n}</div>}
+          {c.contribution.stat && <span class="muted" style="font-size: 15px">{c.contribution.stat.l}</span>}
+        </div>
+        {
+          c.contribution.items.some((i) => i.t) ? (
+            <div class="grid-auto" style="flex: 3 1 520px; --min: 260px; gap: 16px">
+              {c.contribution.items.map((i) => (
+                <div class="tile" style="background: var(--bg)">
+                  <strong>{i.t}</strong>
+                  <span class="muted" style="font-size: 15px">{i.d}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <ul class="col gap12" style="flex: 3 1 520px; margin: 0; padding-left: 20px">
+              {c.contribution.items.map((i) => <li>{i.d}</li>)}
+            </ul>
+          )
+        }
+      </div>
+    </section>
+
+    <footer style="background: var(--ink); color: var(--bg)">
+      <div class="wrap row between center wrap-gap" style="padding-top: 48px; padding-bottom: 48px">
+        <span style="font-family: 'Instrument Serif', serif; font-size: 32px">{tx.nextCase}: {c.next.label}</span>
+        <a href={`/${lang}/${nextTitle.slug}`} class="btn" style="background: var(--bg); color: var(--ink)">{c.next.label} →</a>
+      </div>
+    </footer>
+  </main>
+</Site>
+
+<style>
+  .accent { color: var(--accent); }
+  .case-title { max-width: 980px; font-size: clamp(42px, 6vw, 80px); line-height: 1.04; }
+  .split { display: flex; flex-wrap: wrap; gap: 32px 64px; }
+  .lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+  .lines li { padding: 16px 0; border-top: 1px solid var(--line); }
+  .lines li:last-child { border-bottom: 1px solid var(--line); }
+  .contrib { display: flex; flex-wrap: wrap; gap: 24px 64px; padding: 28px; border-radius: 20px; border: 1px solid var(--line); background: var(--surface); }
+  .big .stat-n { font-size: 44px; }
+</style>
